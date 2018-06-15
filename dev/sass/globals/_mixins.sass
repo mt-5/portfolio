@@ -1,0 +1,19 @@
+=bp($breakpoint) 
+	@media only screen and (max-width: #{$breakpoint})
+		@content
+
+=f($size, $color: 0, $weight: 0, $line-height: 0, $letter-spacing: 0, $text-transform: 0) 
+	font-size: $size
+	@if $color != 0 
+		color: $color
+	@if $weight != 0 
+		font-weight: $weight
+	@if $line-height != 0 
+		line-height: $line-height
+	@if $letter-spacing != 0 
+		letter-spacing: $letter-spacing
+	@if $text-transform != 0 
+		text-transform: $text-transform
+
+@function em($pixels, $context: $font-base-size)
+	@return #{$pixels/$context}em

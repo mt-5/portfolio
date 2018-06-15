@@ -1,0 +1,29 @@
+.c-references
+	margin-top: 40px
+	padding: 0
+	list-style: none
+	&__item
+		padding-left: 60px
+		position: relative
+		margin-bottom: 30px
+		
+		+bp($screen-sm)
+			padding-left: 40px
+
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 25px
+			height: 25px
+			background-image: url('#{$icons}/quote.svg')
+			background-position: center
+			background-repeat: no-repeat
+			background-size: contain
+			
+			+bp($screen-sm)
+				width: 20px
+				height: 20px
+
+			

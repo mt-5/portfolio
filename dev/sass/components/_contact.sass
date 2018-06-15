@@ -1,0 +1,33 @@
+.c-contact
+	list-style: none
+	padding: 0
+
+	+bp($screen-lg)
+		margin-top: 40px 
+
+	&__item
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+		height: 32px
+
+		&__icon
+			display: block
+			width: 32px
+			height: 100%
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			margin-right: 25px
+
+			&--phone
+				background-image: url('#{$icons}/phone.svg')
+			&--mail
+				background-image: url('#{$icons}/mail.svg')
+			&--linkedin
+				background-image: url('#{$icons}/linkedin.svg')
+
+		&__link
+			display: block
+			font-size: 20px
+			line-height: 100%

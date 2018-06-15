@@ -1,0 +1,68 @@
+h1
+	+f(52px, $c-text, 700)
+	margin-bottom: 10px
+
+	+bp($screen-sm)
+		text-align: center
+		font-size: 44px
+
+h2
+	+f(31px, $c-text, 700)
+	margin-bottom: 10px
+
+	+bp($screen-sm)
+		text-align: center
+		font-size: 26px
+
+h3
+	+f(24px, $c-text, 700)
+
+	+bp($screen-sm)
+		font-size: 20px
+
+h4
+	+f(20px, $c-text, 700)
+	
+	+bp($screen-sm)
+		font-size: 16px
+
+p
+	text-align: justify
+	+f(14px, $c-text, 400)
+
+a 
+	position: relative
+	
+	&,
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited
+		color: $c-text
+		text-decoration: none
+
+	&:before 
+		content: ''
+		position: absolute
+		bottom: 0px
+		left: 0
+		width: 0%
+		height: 2px
+		background-color: $c-text
+		transition: width .15s ease-in-out
+
+	&:hover:before
+		width: 100%
+
+hr
+	width: 35px
+	border: none
+	border-bottom: 6px solid $c-border
+	margin: 10px 0
+
+	+bp($screen-sm)
+		margin: 10px auto
+
+section
+	margin-bottom: 60px
+		

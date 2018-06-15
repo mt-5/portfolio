@@ -1,0 +1,42 @@
+.c-education
+	margin-top: 40px
+	padding: 0
+
+	&__item
+		position: relative
+		list-style: none
+		position: relative
+		margin: 0
+		padding-left: 55px
+		overflow: hidden
+
+		+bp($screen-sm)
+			padding-left: 40px
+
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			background-color: $c-text
+
+		&:before
+			width: 18px
+			height: 18px
+			border-radius: 50%
+			left: 0
+
+		&:after
+			width: 2px
+			height: 100%
+			left: 8px
+
+		&__title
+			margin-bottom: 30px
+
+		&__years
+			margin-bottom: 10px
+
+		&__desc
+			margin-bottom: 30px
+

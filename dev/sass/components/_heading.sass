@@ -1,0 +1,53 @@
+.c-heading
+	
+	&__photo
+		@keyframes motion
+			50%
+				transform: rotate(2deg)
+
+		width: 250px
+		height: 250px
+		border: 2px solid $c-border
+		border-radius: 50%
+		background-size: cover
+		background-position: center
+		margin-bottom: 40px
+
+		animation: motion .5s 1s ease-in-out 
+
+		+bp($screen-lg)
+			width: 180px
+			height: 180px
+
+		+bp($screen-sm) 
+			margin: 0 auto 40px auto
+
+	&__title
+		margin: 0
+
+		+bp($screen-lg)
+			font-size: 44px
+
+		+bp($screen-sm)
+			text-align: center
+
+	&__text
+		font-size: 18px
+		margin-top: 25px
+		margin-bottom: 50px
+
+		+bp($screen-lg)
+			margin-bottom: 25px
+
+		+bp($screen-sm)
+			text-align: center
+	
+	&__hr
+		margin: 0
+
+		+bp($screen-sm)
+			margin: 10px auto
+
+	&__line
+		width: 100%
+		border-width: 2px

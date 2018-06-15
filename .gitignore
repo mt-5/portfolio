@@ -1,0 +1,11 @@
+node_modules/
+dev/js/script.js
+dev/js/vendor.js
+build/
+build-*/
+*.css
+*.zip
+/**/*.html
+*.min.js
+.DS_Store
+public/

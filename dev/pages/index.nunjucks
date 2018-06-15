@@ -1,0 +1,117 @@
+{% set currentPage = 'home' %}
+{% extends './partials/layout.nunjucks' %}
+
+{% block content %}
+<div class="row">
+	<div class="col-12">
+		<div class="row align-items-center">
+			<div class="col-lg-5">
+				<div class="c-heading__photo" style="background-image: url('img/profile.jpg')"></div>
+			</div>
+			<div class="col-lg-7">
+				<h1 class="c-heading__title">{{ heading.title }}</h1>
+				<hr class="c-heading__hr">
+				<p class="c-heading__text">
+					{{ heading.desc | safe }}
+				</p>
+				<hr class="c-heading__line">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-5 section">
+				<ul class="c-contact">
+					{% for item in contact.list %}
+						<li class="c-contact__item">
+							<span class="c-contact__item__icon c-contact__item__icon--{{ item.icon_slug }}"></span>
+							<a class="c-contact__item__link" href="{{ item.href }}"{% if item.target %} target="{{ item.target }}"{% endif %}>
+								{{ item.name }}
+							</a>
+						</li>    
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-7">
+				<h2>{{ experience.title }}</h2>
+				<hr>
+				<div class="row c-experience">
+					{% for paragraph in experience.paragraphs %}
+					    <div class="col-sm-6 c-experience__pg">
+							<h3 class="c-experience__pg__title">
+								<span class="c-experience__pg__title__number">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span> 
+								<span class="c-experience__pg__title__name">{{ paragraph.position | safe }}</span>
+							</h3>
+							<p>{{ paragraph.heading | safe }}</p>
+							<ul class="c-experience__pg__list">
+								{% for item in paragraph.list %}
+								    <li class="c-experience__pg__list__item">{{ item | safe }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-5 section">
+				<h2>{{ skills.title }}</h2>
+				<hr>
+				<ul class="c-skills">
+					{% for item in skills.list %}
+						<li class="c-skills__item">
+							<div class="c-skills__item__box">
+								<span class="c-skills__item__box__icon c-skills__item__box__icon--{{ item.icon_slug }}"></span>
+								<span class="c-skills__item__box__desc">{{ item.name | safe }}</span>
+							<div class="box">
+						</li>    
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-7 section">
+				<h2>{{ education.title }}</h2>
+				<hr>
+				<ul class="c-education">
+					{% for item in education.list %}
+						<li class="c-education__item">
+							<h3 class="c-education__item__title">{{ item.title | safe }}</h3>
+							<h4 class="c-education__item__years">{{ item.years | safe }}</h4>
+							<p class="c-education__item__desc">{{ item.desc | safe}}</p>
+						</li>    
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-5 section">
+				<h2>{{ references.title }}</h2>
+				<hr>
+				<ul class="c-references">
+					{% for item in references.list %}
+						<li class="c-references__item">
+							<h3>{{ item.client }}</h3>
+							<p>{{ item.body | safe }}</p>
+						</li>    
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-7 section">
+				<h2>{{ hobby.title }}</h2>
+				<hr>
+				<div class="row c-hobby">
+					{% for item in hobby.list %}
+					    <div class="col-sm-6 c-hobby__item">
+							<div class="c-hobby__item__anim c-hobby__item__anim--{{ item.anim_slug }}">
+								<figure></figure><figure></figure><figure></figure><figure></figure><figure></figure><figure></figure>
+							</div>
+							<span class="c-hobby__item__name">{{ item.name | safe }}</span>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="row c-footer">
+	<div class="col-12">{{ footer.body | safe }}</div>
+</footer>
+{% endblock %}

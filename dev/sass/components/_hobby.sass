@@ -1,0 +1,270 @@
+.c-hobby
+	margin-top: 40px
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 40px
+
+		&__name
+			text-align: center
+			font-size: 20px
+		
+		&__anim
+			display: inline-block
+			width: 150px
+			height: 150px
+			margin-bottom: 10px
+			position: relative
+			
+			figure
+				position: absolute
+				background-size: contain
+				background-repeat: no-repeat
+				background-position: center
+				margin: 0
+
+			&--electronic
+				
+				figure:nth-of-type(1)
+					top: 25px
+					left: 25px
+					width: 100px
+					height: 100px
+					background-image: url(#{$icons}/osciloscope.svg)
+
+				figure:nth-of-type(2)
+					@keyframes movePlot
+						100%
+							background-position: -800px center
+
+					top: 59px
+					left: 34px
+					width: 46px
+					height: 30px
+					background-repeat: repeat-x
+					background-position: 0px center
+					background-size: auto 100%
+					background-image: url(#{$icons}/plot.png)
+					animation: movePlot 8s linear infinite
+
+			&--skiing
+				overflow: hidden
+
+				@keyframes treeMovement1
+					30%
+						transform: translate(-200px, -80px)
+					100%
+						transform: translate(-200px, -80px)
+
+				@keyframes treeMovement2
+					10%
+						transform: translate(-220px, -80px)
+					10.1%
+						transform: translate(0,0)
+					30%
+						transform: translate(0,0)
+					40%
+						transform: translate(-220px, -80px)
+					100%
+						transform: translate(-220px, -80px)
+
+				@keyframes slalom
+					25%
+						transform: translate(-5px, 5px)
+					50%
+						transform: translate(5px, -7px)
+					75%
+						transform: translate(-2px, 10px)
+					100%
+						transform: translate(3px, -4px)
+
+				figure:nth-of-type(1),
+				figure:nth-of-type(2),
+				figure:nth-of-type(3),
+				figure:nth-of-type(4),
+					width: 50px
+					height: 30px
+					background-image: url(#{$icons}/tree.svg)
+					animation: treeMovement1 5s linear infinite
+					
+
+				figure:nth-of-type(1)
+					width: 50px
+					height: 30px
+					top: 40px
+					left: 136px
+					opacity: 0.4
+					animation-delay: 0s
+
+				figure:nth-of-type(2)
+					width: 50px
+					height: 40px
+					top: 50px
+					left: 146px
+					opacity: 0.6
+					animation-duration: 4s
+					animation-delay: 1.5s
+
+				figure:nth-of-type(3)
+					width: 30px
+					height: 35px
+					top: 45px
+					left: 146px
+					opacity: 0.5
+					animation-duration: 4.5s
+					animation-delay: 2.5s
+
+				figure:nth-of-type(4)
+					width: 20px
+					height: 20px
+					top: 30px
+					left: 156px
+					opacity: 0.1
+					animation-duration: 8s
+					animation-delay: 3.5s
+				
+				figure:nth-of-type(5)
+					top: 25px
+					left: 25px
+					width: 100px
+					height: 100px
+					background-image: url(#{$icons}/skiing.svg)
+					transform: translate(3px, -4px)
+					animation: slalom 4s ease-in-out infinite
+
+				figure:nth-of-type(6)
+					top: 90px
+					left: 122px
+					width: 120px
+					height: 120px
+					background-image: url(#{$icons}/tree.svg)
+					animation: treeMovement2 3s linear infinite
+
+			&--music
+				
+				figure:nth-of-type(1)
+					top: 25px
+					left: 25px
+					width: 100px
+					height: 100px
+					background-image: url(#{$icons}/gramophone.svg)
+
+				figure:nth-of-type(2)
+					@keyframes fadeOut1
+						33%
+							transform: translate(100px, -20px)
+							opacity: 0
+						100%
+							transform: translate(100px, -20px)
+							opacity: 0
+
+					top: 40px
+					left: 80px
+					width: 20px
+					height: 20px
+					opacity: 1
+					background-image: url(#{$icons}/note.svg)
+					animation: fadeOut1 10s ease-out infinite
+
+				figure:nth-of-type(3)
+					@keyframes fadeOut2
+						20%
+							transform: translate(60px, -15px)
+							opacity: 0
+						100%
+							transform: translate(60px, -15px)
+							opacity: 0
+
+					top: 59px
+					left: 84px
+					width: 20px
+					height: 20px
+					background-image: url(#{$icons}/note2.svg)
+					opacity: 1
+					animation: fadeOut2 8s ease-out 0 infinite
+
+				figure:nth-of-type(4)
+					@keyframes fadeOut3
+						20%
+							transform: translate(55px, -10px)
+							opacity: 0
+						20.1%
+							transform: translate(0,0)
+							opacity: 0
+						50%
+							transform: translate(0,0)
+							opacity: 0
+						51%
+							transform: translate(0,0)
+							opacity: 1
+						75%
+							transform: translate(50px, 0px)
+							opacity: 0
+						100%
+							transform: translate(50px, 0px)
+							opacity: 0
+
+					top: 45px
+					left: 76px
+					width: 20px
+					height: 20px
+					background-image: url(#{$icons}/note2.svg)
+					opacity: 1
+					animation: fadeOut3 12s ease-out 4s infinite
+
+				figure:nth-of-type(5)
+					@keyframes fadeOut4
+						20%
+							transform: translate(55px, -2px)
+							opacity: 0
+						100%
+							transform: translate(55px, -2px)
+							opacity: 0
+					top: 60px
+					left: 86px
+					width: 20px
+					height: 20px
+					background-image: url(#{$icons}/note.svg)
+					opacity: 1
+					animation: fadeOut4 7s ease-out 5s infinite
+			
+			&--diy
+				
+				figure:nth-of-type(1)
+					@keyframes tighten
+						15%
+							transform: translate(0px, 0px)
+						50%
+							transform: rotate(61deg)
+						60%
+							transform: rotate(61deg) translate(-12px, 12px)
+
+						
+					top: 37px
+					left: 37px
+					width: 86px
+					height: 86px
+					transform-origin: 66px 17px
+					transform: translate(-12px, 12px)
+					background-image: url(#{$icons}/wrench.svg)
+					animation: tighten 3s ease-in-out infinite
+
+				figure:nth-of-type(2)
+					@keyframes screwIn
+						15%
+							transform: rotate(-16deg)
+						50%
+							transform: rotate(45deg)
+						100%
+							transform: rotate(45deg)
+
+							
+					top: 46px
+					left: 94px
+					width: 20px
+					height: 20px
+					transform: rotate(-16deg)
+					background-image: url(#{$icons}/screw.svg)
+					animation: screwIn 3s ease-in-out infinite

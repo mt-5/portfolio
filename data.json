@@ -1,0 +1,218 @@
+{
+  "lang": "en",
+  "meta": {
+    "title": "Maciej Toborek, Full Stack dev",
+    "keywords": "web developer, full stack develper, front end developer, portfolio",
+    "description": "Hi, it's me - full of creativity, cheerful developer. If you're willing to hire me, write boldly ;)"
+  },
+  "og": {
+    "title": "",
+    "url": "",
+    "image": "",
+    "site_name": ""
+  },
+  "heading": {
+    "title": "Maciej Toborek",
+    "desc": "Hi, I'm Full Stack web developer.",
+    "photo_src": "img/profile.jpg"
+  },
+  "contact": {
+    "list": [
+      {
+        "icon_slug": "phone",
+        "name": "+44 7535 638 248",
+        "href": "tel:+447535638248",
+        "target": ""
+      },
+      {
+        "icon_slug": "mail",
+        "name": "maciej@toborek.io",
+        "href": "mailto:maciej@toborek.io",
+        "target": ""
+      },
+      {
+        "icon_slug": "linkedin",
+        "name": "linkedin.com/in/mac-tob",
+        "href": "https://www.linkedin.com/in/mac-tob",
+        "target": "_blank"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "paragraphs": [
+      {
+        "position": "Freelancer",
+        "heading": "As a <strong>freelancer</strong> I:",
+        "list": [
+          "coded RWD layouts from PSD",
+          "created custom scripts in JS",
+          "built REST apps in Laravel",
+          "built websites based on Wordpress CMS",
+          "created unusual animations in CSS, jQuery",
+          "configured VPSes",
+          "designed websites, business cards, leaflets",
+          "every time optimized my own workflow",
+          "managed social media",
+          "and many more..."
+        ]
+      },
+      {
+        "position": "Web developer",
+        "heading": "In <strong>niepsuj.it</strong> I:",
+        "list": [
+          "coded RWD layouts from PSD",
+          "worked with team remotely",
+          "built websites based on the Silex PHP microframework",
+          "built websites based on Wordpress CMS",
+          "prepeared an optimized dev environments",
+          "coded custom animations with CSS3 & JS (jQuery)"
+        ]
+      },
+      {
+        "position": "Trainee",
+        "heading": "In <strong>Mobile Technologies GmbH</strong> I:",
+        "list": [
+          "was programming in C/C++",
+          "worked with team on the speech2speech translator",
+          "tagged voice samples audio"
+        ]
+      },
+      {
+        "position": "Trainee",
+        "heading": "In <strong>Mojito Agencja Kreatywna sp. z o.o.</strong> I:",
+        "list": [
+          "configured Wordpress templates",
+          "coded RWD webistes (Sass, Bootstrap, Foundation)",
+          "coded auctions, emails templates"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "list": [
+      {
+        "name": "HTML5",
+        "icon_slug": "html5"
+      },
+      {
+        "name": "CSS3",
+        "icon_slug": "css3"
+      },
+      {
+        "name": "Java Script",
+        "icon_slug": "js"
+      },
+      {
+        "name": "PHP",
+        "icon_slug": "php"
+      },
+      {
+        "name": "Microsoft Windows",
+        "icon_slug": "windows"
+      },
+      {
+        "name": "Sass",
+        "icon_slug": "sass"
+      },
+      {
+        "name": "Grunt",
+        "icon_slug": "grunt"
+      },
+      {
+        "name": "Wordpress",
+        "icon_slug": "wordpress"
+      },
+      {
+        "name": "Linux",
+        "icon_slug": "linux"
+      },
+      {
+        "name": "GIT",
+        "icon_slug": "git"
+      },
+      {
+        "name": "jQuery",
+        "icon_slug": "jquery"
+      },
+      {
+        "name": "Laravel",
+        "icon_slug": "laravel"
+      },
+      {
+        "name": "Apache",
+        "icon_slug": "apache"
+      },
+      {
+        "name": "Affinity Designer",
+        "icon_slug": "affinity"
+      },
+      {
+        "name": "MySQL",
+        "icon_slug": "mysql"
+      },
+      {
+        "name": "Nginx",
+        "icon_slug": "nginx"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "list": [
+      {
+        "title": "BSc. of Computer Science",
+        "years": "2014-now",
+        "desc": "At University of Silesia in Katowice. <br> One exam left to pass"
+      },
+      {
+        "title": "IT technician",
+        "years": "2009-2014",
+        "desc": "At ZSTiL in Czechowice-Dziedzice."
+      }
+    ]
+  },
+  "references": {
+    "title": "References",
+    "list": [
+      {
+        "client": "Samsung",
+        "body": "The UX designers were very impressed at how far you have come with the page, how good it looks and how well things are functioning. Your developers have done a fantastic job!"
+      },
+      {
+        "client": "Mobile Technologies",
+        "body": "Mr. Toborek has always done the work assigned to him to our full satisfaction. He was always friendly and helpful to his superiors and colleagues."
+      },
+      {
+        "client": "Stalmach",
+        "body": "My admiration for this site has no limits!! This site is great. Really, really good job. We are delighted. I knew from the beginning that cooperation with you will be great, but the results have positively surpassed me. Congratulations once again. I will be recommending your team with confidence. Thanks again."
+      }
+    ]
+  },
+  "hobby": {
+    "title": "Hobby",
+    "list": [
+      {
+        "name": "Digital &amp; analog electronic",
+        "anim_slug": "electronic"
+      },
+      {
+        "name": "Skiing",
+        "anim_slug": "skiing"
+      },
+      {
+        "name": "Music",
+        "anim_slug": "music"
+      },
+      {
+        "name": "DIY",
+        "anim_slug": "diy"
+      }
+    ]
+  },
+  "footer": {
+    "body": "Copyright &copy; 2018 | Created by me"
+  },
+  "build": "6"
+}
