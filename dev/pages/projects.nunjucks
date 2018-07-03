@@ -1,0 +1,10 @@
+<!-- <ul class="c-tools">
+{% for item in tools.list %}
+<li class="c-tools__item">
+	<div class="c-tools__item__box">
+		<span class="c-tools__item__box__icon c-tools__item__box__icon--{{ item.icon_slug }}"></span>
+		<span class="c-tools__item__box__desc">{{ item.name | safe }}</span>
+		<div class="box">
+		</li>    
+		{% endfor %}
+	</ul> -->

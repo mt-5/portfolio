@@ -13,15 +13,15 @@
   },
   "heading": {
     "title": "Maciej Toborek",
-    "desc": "Hi, I'm Full Stack web developer.",
+    "desc": "Hi, I'm Junior Full Stack web developer.",
     "photo_src": "img/profile.jpg"
   },
   "contact": {
     "list": [
       {
         "icon_slug": "phone",
-        "name": "+44 7535 638 248",
-        "href": "tel:+447535638248",
+        "name": "+44 7305 803 712",
+        "href": "tel:+447305803712",
         "target": ""
       },
       {
@@ -38,6 +38,16 @@
       }
     ]
   },
+  "projects": {
+    "title": "Projects",
+    "pages": [
+      "img/projects/stalmach_thumb.jpg",
+      "img/projects/pomorscy_thumb.jpg",
+      "img/projects/sigmapower_thumb.jpg",
+      "img/projects/hkl_thumb.jpg"
+    ],
+    "more": "Explore"
+  },
   "experience": {
     "title": "Experience",
     "paragraphs": [
@@ -52,7 +62,7 @@
           "created unusual animations in CSS, jQuery",
           "configured VPSes",
           "designed websites, business cards, leaflets",
-          "every time optimized my own workflow",
+          "optimized my own workflow on a regular basis",
           "managed social media",
           "and many more..."
         ]
@@ -73,7 +83,7 @@
         "position": "Trainee",
         "heading": "In <strong>Mobile Technologies GmbH</strong> I:",
         "list": [
-          "was programming in C/C++",
+          "programmed in C/C++",
           "worked with team on the speech2speech translator",
           "tagged voice samples audio"
         ]
@@ -93,68 +103,36 @@
     "title": "Skills",
     "list": [
       {
-        "name": "HTML5",
-        "icon_slug": "html5"
+        "name": "HTML",
+        "value": 95
       },
       {
-        "name": "CSS3",
-        "icon_slug": "css3"
+        "name": "CSS",
+        "value": 85
       },
       {
-        "name": "Java Script",
-        "icon_slug": "js"
+        "name": "JS",
+        "value": 55
       },
       {
-        "name": "PHP",
-        "icon_slug": "php"
-      },
-      {
-        "name": "Microsoft Windows",
-        "icon_slug": "windows"
-      },
-      {
-        "name": "Sass",
-        "icon_slug": "sass"
-      },
-      {
-        "name": "Grunt",
-        "icon_slug": "grunt"
-      },
-      {
-        "name": "Wordpress",
-        "icon_slug": "wordpress"
-      },
-      {
-        "name": "Linux",
-        "icon_slug": "linux"
-      },
-      {
-        "name": "GIT",
-        "icon_slug": "git"
+        "name": "Bootstrap",
+        "value": 80
       },
       {
         "name": "jQuery",
-        "icon_slug": "jquery"
+        "value": 90
       },
       {
-        "name": "Laravel",
-        "icon_slug": "laravel"
+        "name": "Wordpress",
+        "value": 55
       },
       {
-        "name": "Apache",
-        "icon_slug": "apache"
+        "name": "PHP",
+        "value": 45
       },
       {
-        "name": "Affinity Designer",
-        "icon_slug": "affinity"
-      },
-      {
-        "name": "MySQL",
-        "icon_slug": "mysql"
-      },
-      {
-        "name": "Nginx",
-        "icon_slug": "nginx"
+        "name": "Laravel 5",
+        "value": 40
       }
     ]
   },
@@ -163,8 +141,8 @@
     "list": [
       {
         "title": "BSc. of Computer Science",
-        "years": "2014-now",
-        "desc": "At University of Silesia in Katowice. <br> One exam left to pass"
+        "years": "2014-2018",
+        "desc": "At University of Silesia in Katowice. <br> One outstanding exam to pass"
       },
       {
         "title": "IT technician",
@@ -182,11 +160,11 @@
       },
       {
         "client": "Mobile Technologies",
-        "body": "Mr. Toborek has always done the work assigned to him to our full satisfaction. He was always friendly and helpful to his superiors and colleagues."
+        "body": "Mr. Toborek completed assigned to him work to our full satisfaction. He was always friendly and helpful to his superiors and colleagues."
       },
       {
         "client": "Stalmach",
-        "body": "My admiration for this site has no limits!! This site is great. Really, really good job. We are delighted. I knew from the beginning that cooperation with you will be great, but the results have positively surpassed me. Congratulations once again. I will be recommending your team with confidence. Thanks again."
+        "body": "My admiration to the site has no limits!! The site is great. Really, really good job. We are delighted. I knew from the beginning that cooperation with you would be great, but the results positively surpassed me. Congratulations once again. I will be recommending you with confidence. Thanks again."
       }
     ]
   },
@@ -214,5 +192,5 @@
   "footer": {
     "body": "Copyright &copy; 2018 | Created by me"
   },
-  "build": "6"
+  "build": "10"
 }
