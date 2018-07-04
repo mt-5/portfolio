@@ -1,10 +1,12 @@
-<!-- <ul class="c-tools">
-{% for item in tools.list %}
-<li class="c-tools__item">
-	<div class="c-tools__item__box">
-		<span class="c-tools__item__box__icon c-tools__item__box__icon--{{ item.icon_slug }}"></span>
-		<span class="c-tools__item__box__desc">{{ item.name | safe }}</span>
-		<div class="box">
-		</li>    
-		{% endfor %}
-	</ul> -->
+{% set currentPage = 'projects' %}
+{% extends './partials/layout.nunjucks' %}
+
+{% block content %}
+<div class="row">
+	<div class="col-12">
+		<h1>Work in progress...</h1>
+		<h5>Sorry about that :(</h5>
+		<a href="http://maciej.toborek.io">&lt;-- Come back</a>
+	</div>
+</div>
+{% endblock %}

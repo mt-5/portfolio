@@ -6,7 +6,7 @@ module.exports = function() {
 	document.addEventListener("DOMContentLoaded", function(){
 		display = document.getElementById('slider');
 		if(display)
-			pages = display.getElementsByClassName('display__page');
+			pages = display.getElementsByTagName('img');
 			if(pages.length > 0) {
 				slider(current);
 			}

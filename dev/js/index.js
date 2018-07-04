@@ -2,3 +2,4 @@
 // global.jQuery = $;
 
 require('./previews')();
+require('./projects')();

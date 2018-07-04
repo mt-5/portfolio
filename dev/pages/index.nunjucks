@@ -34,13 +34,15 @@
 				<div class="section">
 					<h2>{{ projects.title }}</h2>
 					<hr>
-					<a href="projects.html" class="c-projects">
+					<a href="projects.html" class="c-projects" id="open_projects">
 						<div class="c-projects__display" id="slider">
 							{% for page_thumb in projects.pages %}
-							    <div class="c-projects__page display__page" style="background-image: url('{{ page_thumb }}');"></div>
+							    <img class="" src="{{ page_thumb }}" />
 							{% endfor %}
 						</div>
-						<span>{{ projects.more }}</span>
+						<div class="overlay">
+							<span>{{ projects.more }}</span>
+						</div>
 					</a>
 				</div>
 			</div>
