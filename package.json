@@ -26,7 +26,8 @@
     "grunt-sass": "^1.1.0",
     "grunt-tinify": "^0.1.1",
     "lodash": "^3.10.0",
-    "matchdep": "^0.3.0"
+    "matchdep": "^0.3.0",
+    "skrollr": "^0.6.26"
   },
   "dependencies": {
     "bootstrap": "^4.1.1"

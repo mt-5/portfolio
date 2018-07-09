@@ -1,6 +1,16 @@
 .c-education
 	margin-top: 40px
 	padding: 0
+	position: relative
+
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		background-color: $c-text
+		width: 2px
+		height: 100%
+		left: 8px
 
 	&__item
 		position: relative
@@ -13,23 +23,15 @@
 		+bp($screen-sm)
 			padding-left: 40px
 
-		&:before,
-		&:after
+		&:before
 			content: ''
 			position: absolute
 			top: 0
 			background-color: $c-text
-
-		&:before
 			width: 18px
 			height: 18px
 			border-radius: 50%
 			left: 0
-
-		&:after
-			width: 2px
-			height: 100%
-			left: 8px
 
 		&__title
 			margin-bottom: 30px
