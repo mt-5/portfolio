@@ -1,0 +1,53 @@
+.p-project
+	&__heading
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		margin-bottom: 100px
+
+		&__close
+			display: block
+			margin: 12px 0
+			width: 30px
+			height: 30px
+			background-image: url('#{$icons}/close.svg')
+			background-position: center
+			background-size: 100%
+			background-repeat: no-repeat
+
+			&:before
+				content: initial
+
+	.text
+		margin-top: 40px
+		margin-bottom: 0
+
+	&__link
+		display: inline-flex
+		align-self: flex-end
+		margin-left: auto
+		background-color: $c-white
+		box-shadow: inset 0 0 0 2px $c-black
+		font-size: 18px
+		font-weight: 700
+		padding: 10px 25px
+		padding-right: 60px
+		background-image: url('#{$icons}/arrow.svg')
+		background-position: 87% center
+		background-size: 20px auto
+		background-repeat: no-repeat
+		color: $c-black
+		transition: filter .2s ease-in-out, box-shadow .2s ease-in-out, background-position .3s ease-in-out
+		margin-top: -40px
+		filter: invert(0)
+		
+		+bp($screen-lg)
+			margin-bottom: 60px
+
+		&:before
+			content: initial
+
+		&:hover
+			box-shadow: inset 0 0 0 2px $c-white
+			filter: invert(1)
+			background-position: 90%

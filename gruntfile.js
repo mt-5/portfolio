@@ -85,7 +85,9 @@ module.exports = function (grunt) {
 					configureEnvironment: function(env, nunjucks) { env.addGlobal('target', 'dev'); },
 				},
 			    files: [
-			    	{ expand: true, cwd: 'dev/pages', src: "*.nunjucks", dest: "dev/", ext: ".html" }
+			    	{ expand: true, cwd: 'dev/pages/', src: "*.nunjucks", dest: "dev/", ext: ".html" },
+			    	{ expand: true, cwd: 'dev/pages/views/', src: "*.nunjucks", dest: "dev/views/", ext: ".html" },
+			    	{ expand: true, cwd: 'dev/pages/views/projects/', src: "*.nunjucks", dest: "dev/views/projects/", ext: ".html" }
 			    ]
 			},
 			build: {
@@ -94,7 +96,9 @@ module.exports = function (grunt) {
 					configureEnvironment: function(env, nunjucks) { env.addGlobal('target', 'build'); },
 				},
 			    files: [
-			    	{  expand: true, cwd: 'dev/pages', src: "*.nunjucks", dest: "build/", ext: ".html" }
+			    	{  expand: true, cwd: 'dev/pages/', src: "*.nunjucks", dest: "build/", ext: ".html" },
+			    	{  expand: true, cwd: 'dev/pages/views/', src: "*.nunjucks", dest: "build/views/", ext: ".html" },
+			    	{ expand: true, cwd: 'dev/pages/projects/', src: "*.nunjucks", dest: "build/views/projects/", ext: ".html" }
 			    ]
 			}
 		},

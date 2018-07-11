@@ -1,0 +1,7 @@
+{% block content %}
+	<div class="p-404">
+		<h1>Error 404</h1>
+		<h2>Page not found</h2>
+		<a href="javascript:history.back()">&lt;-- Come back</a>
+	</div>
+{% endblock %}

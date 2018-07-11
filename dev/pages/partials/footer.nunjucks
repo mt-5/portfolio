@@ -1,0 +1,3 @@
+<footer class="row c-footer">
+	<div class="col-12">{{ footer.body | safe }}</div>
+</footer>

@@ -1,4 +1,8 @@
 {
+  "server_name": {
+    "dev" : "http://portfolio3.lc",
+    "prod" : "http://maciej.toborek.io"
+  },
   "lang": "en",
   "meta": {
     "title": "Maciej Toborek, Full Stack dev",
@@ -38,7 +42,7 @@
       }
     ]
   },
-  "projects": {
+  "projects_previews": {
     "title": "Projects",
     "pages": [
       "img/projects/stalmach_thumb.jpg",
@@ -115,8 +119,8 @@
         "value": 55
       },
       {
-        "name": "Bootstrap",
-        "value": 80
+        "name": "GIT",
+        "value": 50
       },
       {
         "name": "jQuery",

@@ -1,0 +1,89 @@
+.c-gallery
+	margin-bottom: 60px
+	
+	&__preview
+		border: 2px solid $c-border
+		width: 100%
+		height: 0
+		padding-top: 74%
+		position: relative
+		overflow: hidden
+		background-size: cover
+		background-position: center
+		transition: background-image .3s ease-in-out
+
+	&__nav
+		margin: 10px -5px
+		position: relative
+
+		#nav-slider
+			cursor: initial !important
+
+		&__link
+			position: relative
+			margin: 0 5px
+			display: block
+			padding-top: 90%
+			border: 2px solid $c-border
+			background-size: cover
+			background-position: center
+			cursor: pointer
+			
+			&:before
+				content: initial
+
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: rgba(0,0,0,0.2)
+				opacity: 0
+				transition: opacity .2s ease-in-out
+			
+			&.active
+				pointer-events: none
+
+			&.active,
+			&:hover
+				&:after
+					opacity: 1
+
+				
+
+		&__btn
+			position: absolute
+			top: 50%
+			width: 30px
+			height: 30px
+			background-image: url('#{$icons}/arrow.svg')
+			background-color: transparent
+			background-position: 0px center
+			background-repeat: no-repeat
+			background-size: 25px
+			border: 0
+			cursor: pointer
+			transition: background-position .2s ease-in-out
+			z-index: 2
+
+			&--next
+				right: -30px
+				transform: translateY(-50%)
+				+bp($screen-sm)
+					right: 8px
+
+			&--prev
+				left: -30px
+				transform: translateY(-50%) rotate(180deg)
+				+bp($screen-sm)
+					left: 8px
+
+			&:hover
+				background-position: 5px center 
+
+			+bp($screen-sm)
+				opacity: 0.5
+				
+			

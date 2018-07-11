@@ -1,0 +1,47 @@
+.c-projects-grid
+	margin-bottom: 40px 
+	
+	&__heading
+		margin-bottom: 40px
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+		&__back
+			width: 50px
+			height: 60px
+			background-image: url('#{$icons}/arrow_back.svg')
+			background-size: 30px
+			background-position: 20px center
+			background-repeat: no-repeat
+			transition: background-position .15s ease-in-out
+
+			&:hover
+				background-position: 15px center
+			
+
+	a:before
+		content: initial;
+
+	&__item
+		border: 2px solid $c-border
+		margin: 15px 0
+
+		&__thumb
+			width: 100%
+			height: 300px
+			background-color: #bbb
+			background-position: center top
+			background-size: cover
+
+		&__caption
+			padding: 15px
+			border-top: 2px solid $c-border
+
+		&__name
+			margin-top: 0
+			margin-bottom: 5px
+			font-size: 24px
+
+		&__desc
+			margin: 0
