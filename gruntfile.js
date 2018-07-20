@@ -34,26 +34,13 @@ module.exports = function (grunt) {
 			},
 			html: {
 				files: [ 'dev/**/*.nunjucks', 'data*.json' ],
-				tasks: [ 'nunjucks:dev' ]
+				tasks: [ 'clean:html', 'nunjucks:dev' ]
 			}
 		},
 		browserify: {
-			// options: {
-			// 	transform: [
-			// 		["babelify", { presets: ['es2015'] }]
-			// 	]
-			// },
 			script:{
-				//options: { external: [ 'jquery', 'lodash'] },
 				src: [ 'dev/js/index.js' ],
 				dest:  'dev/js/script.js'
-			},
-			vendor:{
-				src: [],
-				dest: 'dev/js/vendor.js',
-				options: {
-					//require: [ 'lodash', 'jquery'],
-				}
 			}
 		},
 		postcss: {
@@ -85,9 +72,13 @@ module.exports = function (grunt) {
 					configureEnvironment: function(env, nunjucks) { env.addGlobal('target', 'dev'); },
 				},
 			    files: [
-			    	{ expand: true, cwd: 'dev/pages/', src: "*.nunjucks", dest: "dev/", ext: ".html" },
-			    	{ expand: true, cwd: 'dev/pages/views/', src: "*.nunjucks", dest: "dev/views/", ext: ".html" },
-			    	{ expand: true, cwd: 'dev/pages/views/projects/', src: "*.nunjucks", dest: "dev/views/projects/", ext: ".html" }
+					{
+						expand: true, 
+						cwd: 'dev/pages/', 
+						src: "*.nunjucks", 
+						dest: "dev/", 
+						ext: ".html"
+					}
 			    ]
 			},
 			build: {
@@ -96,9 +87,13 @@ module.exports = function (grunt) {
 					configureEnvironment: function(env, nunjucks) { env.addGlobal('target', 'build'); },
 				},
 			    files: [
-			    	{  expand: true, cwd: 'dev/pages/', src: "*.nunjucks", dest: "build/", ext: ".html" },
-			    	{  expand: true, cwd: 'dev/pages/views/', src: "*.nunjucks", dest: "build/views/", ext: ".html" },
-			    	{ expand: true, cwd: 'dev/pages/projects/', src: "*.nunjucks", dest: "build/views/projects/", ext: ".html" }
+			    	{
+						expand: true, 
+						cwd: 'dev/pages/', 
+						src: "**/*.nunjucks", 
+						dest: "build/", 
+						ext: ".html"
+					}
 			    ]
 			}
 		},
@@ -110,13 +105,14 @@ module.exports = function (grunt) {
 			},
 			packages: {
 				files: [
-					{src: ['build*.zip'], dest: '/', filter: 'isFile'}
+					{ src: ['build*.zip'], dest: '/', filter: 'isFile' }
 				]
 			}
 		},
 		clean: {
 			build: ['build', 'build.zip'], 
-			img: ['build/img/'], 
+			img: ['build/img/'],
+			html: ['dev/**/*.html']
 		},
 		chmod: {
 			options: {
@@ -133,7 +129,7 @@ module.exports = function (grunt) {
 					mode: 'zip'
 				},
 				files: [
-					{expand: true, cwd: 'build/', src:['**'], dest: ''}
+					{ expand: true, cwd: 'build/', src:['**'], dest: '' }
 				]
 			}
 		},
@@ -142,11 +138,26 @@ module.exports = function (grunt) {
               field: 'build',
             },
             files: ['data.json']
+        },
+        shell: {
+        	deploy: {
+        		command: [
+        			'echo "Uploading app to server..."',
+        			'scp build.zip maciej@toborek.io:build.zip',
+        			'echo "Deleting files on server..."',
+        			'ssh maciej@toborek.io "rm -rf www/*"',
+        			'echo "Unpacking files..."',
+        			'ssh maciej@toborek.io "unzip -q build.zip -d www/"',
+        			'echo "Deleting temp files..."',
+        			'ssh maciej@toborek.io "rm build.zip"',
+        			'echo "Finish!"'
+        		].join('&&')
+        	}
         }
 	});
 
-	grunt.registerTask('compile', 	['sass', 'browserify', 'nunjucks:dev'] );
+	grunt.registerTask('compile', 	['sass', 'browserify', 'clean:html', 'nunjucks:dev'] );
 	grunt.registerTask('default', 	['compile', 'watch']);
 	grunt.registerTask('build', 	['buildnumber', 'clean:build', 'copy:build', 'sass', 'postcss:build', 'browserify', 'uglify:build', 'nunjucks:build', 'chmod:build'] );
-	grunt.registerTask('build-zip', ['build', 'compress:build'] );
+	grunt.registerTask('deploy',	['compress', 'shell:deploy'] );
 }
