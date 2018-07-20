@@ -1,0 +1,81 @@
+<div class="p-project">
+	<div class="row">
+		<div class="col-12 p-project__heading">
+			<div>
+				<h1>{{ portfolio.title }} / {{ content.name }}</h1>
+				<hr>
+			</div>
+			<a href="#{{ portfolio.slug }}" class="p-project__heading__close"></a>
+		</div>
+		<div class="col-xl-8">
+			<div class="c-gallery" id="gallery">
+				<div class="c-gallery__preview">
+					<div class="c-mockup-sg mockup" id="m-sg">
+						<div class="phone">
+							<div class="screen">
+								<img class="website" alt="Website layout">
+							</div>
+						</div>
+						<div class="keyboard"></div>
+						<div class="succulent"></div>
+					</div>
+
+					<div class="c-mockup-ss mockup" id="m-ss">
+						<div class="display">
+							<div class="screen">
+								<img class="website" alt="Website layout">
+							</div>
+						</div>
+					</div>
+					<div class="c-mockup-def mockup" id="m-def">
+						<div class="screen">
+							<img class="website" alt="Website layout">
+						</div>
+					</div>
+				</div>
+				<div class="c-gallery__nav">
+					<div id="nav">
+						{% for item in content.gallery %}
+						    <a data-src="{{ item.layout }}" data-mockup="{{ item.mockup }}" class="c-gallery__nav__link  nav_link{% if loop.index == 1 %} active{% endif %}" style="background-image: url('{{ item.thumb }}');"></a>
+						{% endfor %}
+					</div>
+					<button class="c-gallery__nav__btn c-gallery__nav__btn--prev" id="nav-prev"></button>
+					<button class="c-gallery__nav__btn c-gallery__nav__btn--next" id="nav-next"></button>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-4 d-flex flex-direction-column justify-content-between">
+			<div class="row flex-row-reverse">
+				<div class="col-md-6 col-xl-12 p-project__section">
+					<h2>{{ projects.desc }}</h2>
+					<hr>
+					<p class="text">
+						{{ content.desc | safe }}
+					</p>
+				</div>
+				<div class="col-md-6 col-xl-12">
+					<h2>{{ projects.tools }}</h2>
+					<hr>
+					<ul class="c-tools">
+						{% for tool in content.tools %}
+						    <li class="c-tools__item">
+								<div class="box">
+									<span class="icon icon--{{ tool.icon }}"></span>
+									<span class="desc">{{ tool.name }}</span>
+								</div>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			{% if content.href %}
+				<div class="row align-self-md-end">
+					<div class="col-12 text-center text-md-right">
+						<a href="{{ content.href }}" target="_blank" class="c-button p-project__link">{{ projects.visit_webstie }}</a>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

@@ -75,7 +75,7 @@ module.exports = function (grunt) {
 					{
 						expand: true, 
 						cwd: 'dev/pages/', 
-						src: "**/*.nunjucks", 
+						src: ["**/*.nunjucks", "!templates/**"], 
 						dest: "dev/", 
 						ext: ".html"
 					}
@@ -90,7 +90,7 @@ module.exports = function (grunt) {
 			    	{
 						expand: true, 
 						cwd: 'dev/pages/', 
-						src: "**/*.nunjucks", 
+						src: ["**/*.nunjucks", "!templates/**"], 
 						dest: "build/", 
 						ext: ".html"
 					}
@@ -98,12 +98,12 @@ module.exports = function (grunt) {
 			}
 		},
 		htmlmin: {
-			dist: {                                      // Target
-				options: {                                 // Target options
+			dist: {
+				options: {
 					removeComments: true,
 					collapseWhitespace: true
 				},
-				files: [                                 // Dictionary of files
+				files: [
 					{
 						expand: true,
 						cwd: 'build/',
