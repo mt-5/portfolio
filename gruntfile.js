@@ -97,6 +97,22 @@ module.exports = function (grunt) {
 			    ]
 			}
 		},
+		htmlmin: {
+			dist: {                                      // Target
+				options: {                                 // Target options
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: [                                 // Dictionary of files
+					{
+						expand: true,
+						cwd: 'build/',
+						src: "**/*.html",
+						dest: "build/"
+					}
+				]
+			}
+		},
 		copy: {
 			build: {
 				files: [
@@ -158,6 +174,6 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('compile', 	['sass', 'browserify', 'clean:html', 'nunjucks:dev'] );
 	grunt.registerTask('default', 	['compile', 'watch']);
-	grunt.registerTask('build', 	['buildnumber', 'clean:build', 'copy:build', 'sass', 'postcss:build', 'browserify', 'uglify:build', 'nunjucks:build', 'chmod:build'] );
+	grunt.registerTask('build', 	['buildnumber', 'clean:build', 'copy:build', 'sass', 'postcss:build', 'browserify', 'uglify:build', 'nunjucks:build', 'htmlmin', 'chmod:build'] );
 	grunt.registerTask('deploy',	['compress', 'shell:deploy'] );
 }

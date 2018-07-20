@@ -183,72 +183,6 @@
         "slug": "stalmach",
         "desc": "Wordpress website",
         "thumb": "img/projects/stalmach/thumb.jpg"
-      },
-      {
-        "name": "Neffos",
-        "slug": "neffos",
-        "desc": "Static website",
-        "thumb": "img/projects/neffos/thumb.jpg"
-      },
-      {
-        "name": "HK Logistic",
-        "slug": "hkl",
-        "desc": "Wordpress template",
-        "thumb": "img/projects/hkl/thumb.jpg"
-      },
-      {
-        "name": "Sigmapower",
-        "slug": "sigmapower",
-        "desc": "Wordpress template",
-        "thumb": "img/projects/sigmapower/thumb.jpg"
-      },
-      {
-        "name": "Real Friends",
-        "slug": "real-friends",
-        "desc": "Laravel app",
-        "thumb": "img/projects/rf/thumb.jpg"
-      },
-      {
-        "name": "Pomorscy",
-        "slug": "pomorscy",
-        "desc": "Wordpress template",
-        "thumb": "img/projects/pomorscy/thumb.jpg"
-      },
-      {
-        "name": "Animation",
-        "slug": "glensk",
-        "desc": "Short slider created in Adobe AE",
-        "thumb": "img/projects/glensk/thumb.jpg"
-      },
-      {
-        "name": "Magazyn Praga",
-        "slug": "magazyn-praga",
-        "desc": "SPA with custom slider",
-        "thumb": "img/projects/neffos/thumb.jpg"
-      },
-      {
-        "name": "Syntonic",
-        "slug": "syntonic",
-        "desc": "Wordpress template",
-        "thumb": "img/projects/syntonic/thumb.jpg"
-      },
-      {
-        "name": "MAP",
-        "slug": "map",
-        "desc": "Static website",
-        "thumb": "img/projects/map/thumb.jpg"
-      },
-      {
-        "name": "Welderstal",
-        "slug": "welderstal",
-        "desc": "Application for Android",
-        "thumb": "img/projects/welderstal/thumb.jpg"
-      },
-      {
-        "name": "Skarb Kibica",
-        "slug": "skarb-kibica",
-        "desc": "Application for Android",
-        "thumb": "img/projects/skarb-kibica/thumb.jpg"
       }
     ]
   },
@@ -336,5 +270,5 @@
       ]
     }
   },
-  "build": "21"
+  "build": "23"
 }

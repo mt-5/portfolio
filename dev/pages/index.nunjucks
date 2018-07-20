@@ -32,53 +32,10 @@
 	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#000000">
 	<meta name="msapplication-TileColor" content="#ebebeb">
 	<meta name="theme-color" content="#ffffff">
-
+	
+	<!-- Critical CSS -->
 	<style>
-	*{
-		margin: 0;
-	}
-	body,html {
-		width: 100%;
-		height: 100%;
-	}
-
-	body {
-		overflow-y: scroll;
-	}
-	body .c-loader {
-		position: fixed;
-		z-index: 100;
-		width: calc(100% + 13px);
-		height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		opacity: 0;
-		background-color: #fff;
-		transition: opacity .2s ease-in-out, visibility 0s .2s linear;
-		visibility: hidden
-	}
-
-	body.loading  .c-loader{
-		transition-delay: 0s;
-		opacity: 1;
-		visibility: visible
-	}
-
-	.c-loader__progressbar {
-			width: 200px;
-			height: 12px;
-			border: 2px solid #000;
-			overflow: hidden;		
-	}
-
-	.c-loader__progressbar__bar {
-		height: 100%;
-		background-color: #000;
-		width: 0%;
-		transition: width .3s ease-in-out;
-	}
-
+		*{margin:0}body,html{width:100%;height:100%}body{overflow-y:scroll}body .c-loader{position:fixed;z-index:100;width:calc(100% + 13px);height:100vh;display:flex;align-items:center;justify-content:center;opacity:0;background-color:#fff;transition:opacity .2s ease-in-out,visibility 0s .2s linear;visibility:hidden}body.loading .c-loader{transition-delay:0s;opacity:1;visibility:visible}.c-loader__progressbar{width:200px;height:12px;border:2px solid #000;overflow:hidden}.c-loader__progressbar__bar{height:100%;background-color:#000;width:0%;transition:width .3s ease-in-out}
 	</style>
 
 	<link href="css/style.css" rel="stylesheet">
@@ -95,7 +52,7 @@
 				<div id="main-wrapper" class="main-wrapper"></div>
 			</div>
 		</div>
-		{% include './partials/footer.nunjucks' %}
+		{% include './templates/footer.nunjucks' %}
 	</div>
 
 	{% if target == 'dev' %}
