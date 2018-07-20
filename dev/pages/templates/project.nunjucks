@@ -5,7 +5,7 @@
 				<h1>{{ portfolio.title }} / {{ content.name }}</h1>
 				<hr>
 			</div>
-			<a href="#{{ portfolio.slug }}" class="p-project__heading__close"></a>
+			<a href="{{ portfolio.slug }}" data-navigo class="p-project__heading__close"></a>
 		</div>
 		<div class="col-xl-8">
 			<div class="c-gallery" id="gallery">

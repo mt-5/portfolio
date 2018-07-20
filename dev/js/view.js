@@ -17,9 +17,12 @@ module.exports = function(viewsPath, wrapperSelector, loaderSelector){
 		document.body.classList.add('loading');
 		wrapper.classList.remove('page-loaded');
 
-		Axios.get(viewsPath + '/' + name + '.html')
+		Axios({
+			method: 'get',
+			url: viewsPath + '/' + name + '.html',
+			contentType: 'text/plain'
+		})
 		.then(function (response) {
-
 			wrapper.innerHTML = response.data;
 			var h1 = wrapper.getElementsByTagName('h1');
 			if(h1.length && baseTitle !== h1[0].innerHTML )

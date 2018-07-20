@@ -32,7 +32,7 @@
 						<h2>{{ home.portfolio.title }}</h2>
 						<hr>
 						<div class="text-center text-sm-left">
-							<a href="#{{ portfolio.slug }}" class="c-button p-home__link">{{ home.portfolio.link }}</a>
+							<a href="{{ portfolio.slug }}" data-navigo class="c-button p-home__link">{{ home.portfolio.link }}</a>
 						</div>
 					</div>
 				</div>

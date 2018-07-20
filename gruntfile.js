@@ -158,15 +158,15 @@ module.exports = function (grunt) {
         shell: {
         	deploy: {
         		command: [
-        			'echo "Uploading app to server..."',
+        			'echo Uploading app to server...',
         			'scp build.zip maciej@toborek.io:build.zip',
-        			'echo "Deleting files on server..."',
+        			'echo Deleting files on server...',
         			'ssh maciej@toborek.io "rm -rf www/*"',
-        			'echo "Unpacking files..."',
+        			'echo Unpacking files...',
         			'ssh maciej@toborek.io "unzip -q build.zip -d www/"',
-        			'echo "Deleting temp files..."',
+        			'echo Deleting temp files...',
         			'ssh maciej@toborek.io "rm build.zip"',
-        			'echo "Finish!"'
+        			'echo Finish!'
         		].join('&&')
         	}
         }

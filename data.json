@@ -93,23 +93,23 @@
       "list": [
         {
           "name": "HTML",
-          "value": 95
-        },
-        {
-          "name": "CSS",
           "value": 85
         },
         {
+          "name": "CSS",
+          "value": 75
+        },
+        {
           "name": "JS",
-          "value": 55
+          "value": 45
         },
         {
           "name": "jQuery",
-          "value": 90
+          "value": 80
         },
         {
           "name": "Wordpress",
-          "value": 65
+          "value": 55
         },
         {
           "name": "PHP",
@@ -270,5 +270,5 @@
       ]
     }
   },
-  "build": "25"
+  "build": "27"
 }
