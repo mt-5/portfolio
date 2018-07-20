@@ -1,7 +1,7 @@
 body, html
 	width: 100%
 	height: 100%
-	font-family: 'Adelle', sans-serif;
+	font-family: 'Adelle', Georgia, serif
 	font-size: $font-base-size
 	font-weight: 400
 	color: $c-text
@@ -11,9 +11,9 @@ body, html
 	padding-bottom: 35px
 
 .section
-	margin-bottom: 80px
+	margin-bottom: 70px
 	+bp($screen-lg)
-		margin-bottom: 50px 
+		margin-bottom: 40px 
 
 .main-col-left
 	padding-right: 30px
@@ -47,3 +47,23 @@ a,button,input
 		padding: 15px
 		padding-bottom: 0
 		border: none
+
+.flex-direction-column
+	flex-direction: column !important
+
+.flex-direction-row
+	flex-direction: row !important
+
+
+#main-wrapper
+	opacity: 0
+
+	@keyframes op 
+		0%
+			opacity: 0
+		100% 
+			opacity: 1
+
+	&.page-loaded
+		opacity: 1
+		animation: op .5s ease-in-out

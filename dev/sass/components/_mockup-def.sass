@@ -1,0 +1,24 @@
+.c-mockup-def
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	transition: opacity .25s ease-in-out, visibility 0s .25s linear
+	visibility: hidden
+	z-index: 1
+	opacity: 0
+
+	&.shown
+		transition-delay: 0s
+		visibility: visible
+		z-index: 2
+		opacity: 1
+
+	.screen
+		width: 100%
+		height: 100%
+
+		img
+			width: 100%
+			height: auto

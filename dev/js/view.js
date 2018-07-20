@@ -6,36 +6,38 @@ module.exports = function(viewsPath, wrapperSelector, loaderSelector){
 	
 
 	//Vars
+	var baseTitle = document.title;
+	const separator = ' / ';
 	var wrapper = document.querySelector(wrapperSelector);
 	var progressbar = document.querySelector(loaderSelector);
-	var beforeCallback = null;
-	var afterCallback = null;
-	var errorCallback = null;
 
 	var load = function(name, afterLoading){
-		if(beforeCallback)
-			beforeCallback();
 
 		//Show loading screen
 		document.body.classList.add('loading');
+		wrapper.classList.remove('page-loaded');
 
 		Axios.get(viewsPath + '/' + name + '.html')
 		.then(function (response) {
 
 			wrapper.innerHTML = response.data;
 			var h1 = wrapper.getElementsByTagName('h1');
-			if(h1.length)
-				document.title = wrapper.getElementsByTagName('h1')[0].innerHTML;
-			
-			waitForAssets(function() {
+			if(h1.length && baseTitle !== h1[0].innerHTML )
 
-				if(afterCallback)
-					afterCallback();
+				document.title = baseTitle + separator + h1[0].innerHTML;
+			else
+				document.title = baseTitle;
+
+			if(ENV === 'dev')
+				console.log('Current view: "' + name + '"');
+			
+			waitForAssets('#main-wrapper', function() {
 
 				if(afterLoading)
 					afterLoading(response.data);
 
 				//Hide loading screen
+				wrapper.classList.add('page-loaded');
 				document.body.classList.remove('loading');
 				setTimeout(function(){
 					progressbar.style.width = '0%';
@@ -47,13 +49,12 @@ module.exports = function(viewsPath, wrapperSelector, loaderSelector){
 				progressbar.style.width = data.percent + '%';
 			});
 
-		}).catch(errorCallback);
+		}).catch(function(){
+			load('404');
+		});
 	};
 
 	return {
-		load: load,
-		before: function(callback) { beforeCallback = callback },
-		after: function(callback) { afterCallback = callback },
-		onError: function(callback) { errorCallback = callback }
+		load: load
 	}
 }

@@ -1,2 +1,1 @@
 require('./router')();
-require('./gallery')();

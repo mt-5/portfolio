@@ -1,0 +1,108 @@
+.c-mockup-sg
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-image: url('#{$img}/sg_mockup_desk.jpg')
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	transition: opacity .25s ease-in-out, visibility 0s .25s linear
+	visibility: hidden
+	z-index: 1
+	opacity: 0
+
+	&.shown
+		transition-delay: 0s
+		visibility: visible
+		z-index: 2
+		opacity: 1
+
+	&.animate
+		.succulent
+			transition: transform .4s .3s ease-in-out
+			transform: rotate3d(0,0,1,0deg) translate3d(-27%,-5%,0)
+
+		.keyboard
+			transition: transform .7s .4s ease-in-out
+			transform: rotate3d(0,0,1,15deg) translate3d(15%,-60%,0)
+
+		.phone
+			transition: transform .6s .7s cubic-bezier(0,0,.65,.99)
+			transform: rotate3d(0,0,1,0deg) translate3d(0%,0%,0)
+
+
+	//1664x1231 
+	.phone
+		position: relative
+		top: 8.58%
+		left: 35.43%
+		width: 29.47%
+		height: 84.48%
+		transform: rotate3d(0,0,1,8deg) translate3d(140%, 120%, 0)
+		
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-image: url('#{$img}/sg_mockup_phone.png')
+			background-size: 100% 100%
+			background-repeat: no-repeat
+			background-position: center
+			z-index: 3
+
+		&:after
+			content: ''
+			position: absolute
+			top: -3%
+			left: -17%
+			width: 150.13%
+			height: 118.75%
+			background-image: url('#{$img}/sg_mockup_shadow.png')
+			background-position: center
+			background-repeat: no-repeat
+			background-size: 100% 100%
+			z-index: 1
+
+			
+		.screen
+			position: relative
+			top: 4.5%
+			left: 2.45%
+			width: 95.32%
+			height: 91.5%
+			overflow: hidden
+			z-index: 2
+			background-color: #000
+
+			img
+				transition: opacity .3s ease-in-out
+				transform: translate3d(0,0,0)
+				width: 100%
+
+	.keyboard
+		position: absolute
+		top: -2%
+		left: 48%
+		background-image: url('#{$img}/sg_mockup_keyboard.png')
+		background-position: center
+		background-repeat: no-repeat
+		background-size: 100% 100%
+		width: 53.43%
+		height: 28.27%
+
+	.succulent
+		position: absolute
+		top: 68%
+		left: -2%
+		background-image: url('#{$img}/sg_mockup_succulent.png')
+		background-position: center
+		background-repeat: no-repeat
+		background-size: 100% 100%
+		width: 41.23%
+		height: 55.73%
+		transform: rotate3d(0,0,1,3deg) translate3d(0,0,0)
+		

@@ -1,13 +1,13 @@
 {
   "server_name": {
-    "dev" : "http://portfolio3.lc",
-    "prod" : "http://maciej.toborek.io"
+    "dev": "http://portfolio3.lc",
+    "prod": "http://maciej.toborek.io"
   },
   "lang": "en",
   "meta": {
-    "title": "Maciej Toborek, Full Stack dev",
+    "title": "Maciej Toborek",
     "keywords": "web developer, full stack develper, front end developer, portfolio",
-    "description": "Hi, it's me - full of creativity, cheerful developer. If you're willing to hire me, write boldly ;)"
+    "description": "Hi, it's me - full of creativity, energetic developer. If you're willing to hire me, write boldly ;)"
   },
   "og": {
     "title": "",
@@ -15,186 +15,326 @@
     "image": "",
     "site_name": ""
   },
-  "heading": {
-    "title": "Maciej Toborek",
-    "desc": "Hi, I'm Junior Full Stack web developer.",
-    "photo_src": "img/profile.jpg"
-  },
-  "contact": {
-    "list": [
-      {
-        "icon_slug": "phone",
-        "name": "+44 7305 803 712",
-        "href": "tel:+447305803712",
-        "target": ""
-      },
-      {
-        "icon_slug": "mail",
-        "name": "maciej@toborek.io",
-        "href": "mailto:maciej@toborek.io",
-        "target": ""
-      },
-      {
-        "icon_slug": "linkedin",
-        "name": "linkedin.com/in/mac-tob",
-        "href": "https://www.linkedin.com/in/mac-tob",
-        "target": "_blank"
-      }
-    ]
-  },
-  "projects_previews": {
-    "title": "Projects",
-    "pages": [
-      "img/projects/stalmach_thumb.jpg",
-      "img/projects/pomorscy_thumb.jpg",
-      "img/projects/sigmapower_thumb.jpg",
-      "img/projects/hkl_thumb.jpg"
-    ],
-    "more": "Explore"
-  },
-  "experience": {
-    "title": "Experience",
-    "paragraphs": [
-      {
-        "position": "Freelancer",
-        "heading": "As a <strong>freelancer</strong> I:",
-        "list": [
-          "coded RWD layouts from PSD",
-          "created custom scripts in JS",
-          "built REST apps in Laravel",
-          "built websites based on Wordpress CMS",
-          "created unusual animations in CSS, jQuery",
-          "configured VPSes",
-          "designed websites, business cards, leaflets",
-          "optimized my own workflow on a regular basis",
-          "managed social media",
-          "and many more..."
-        ]
-      },
-      {
-        "position": "Web developer",
-        "heading": "In <strong>niepsuj.it</strong> I:",
-        "list": [
-          "coded RWD layouts from PSD",
-          "worked with team remotely",
-          "built websites based on the Silex PHP microframework",
-          "built websites based on Wordpress CMS",
-          "prepeared an optimized dev environments",
-          "coded custom animations with CSS3 & JS (jQuery)"
-        ]
-      },
-      {
-        "position": "Trainee",
-        "heading": "In <strong>Mobile Technologies GmbH</strong> I:",
-        "list": [
-          "programmed in C/C++",
-          "worked with team on the speech2speech translator",
-          "tagged voice samples audio"
-        ]
-      },
-      {
-        "position": "Trainee",
-        "heading": "In <strong>Mojito Agencja Kreatywna sp. z o.o.</strong> I:",
-        "list": [
-          "configured Wordpress templates",
-          "coded RWD webistes (Sass, Bootstrap, Foundation)",
-          "coded auctions, emails templates"
-        ]
-      }
-    ]
-  },
-  "skills": {
-    "title": "Skills",
-    "list": [
-      {
-        "name": "HTML",
-        "value": 95
-      },
-      {
-        "name": "CSS",
-        "value": 85
-      },
-      {
-        "name": "JS",
-        "value": 55
-      },
-      {
-        "name": "GIT",
-        "value": 50
-      },
-      {
-        "name": "jQuery",
-        "value": 90
-      },
-      {
-        "name": "Wordpress",
-        "value": 55
-      },
-      {
-        "name": "PHP",
-        "value": 45
-      },
-      {
-        "name": "Laravel 5",
-        "value": 40
-      }
-    ]
-  },
-  "education": {
-    "title": "Education",
-    "list": [
-      {
-        "title": "BSc. of Computer Science",
-        "years": "2014-2018",
-        "desc": "At University of Silesia in Katowice. <br> One outstanding exam to pass"
-      },
-      {
-        "title": "IT technician",
-        "years": "2009-2014",
-        "desc": "At ZSTiL in Czechowice-Dziedzice."
-      }
-    ]
-  },
-  "references": {
-    "title": "References",
-    "list": [
-      {
-        "client": "Samsung",
-        "body": "The UX designers were very impressed at how far you have come with the page, how good it looks and how well things are functioning. Your developers have done a fantastic job!"
-      },
-      {
-        "client": "Mobile Technologies",
-        "body": "Mr. Toborek completed assigned to him work to our full satisfaction. He was always friendly and helpful to his superiors and colleagues."
-      },
-      {
-        "client": "Stalmach",
-        "body": "My admiration to the site has no limits!! The site is great. Really, really good job. We are delighted. I knew from the beginning that cooperation with you would be great, but the results positively surpassed me. Congratulations once again. I will be recommending you with confidence. Thanks again."
-      }
-    ]
-  },
-  "hobby": {
-    "title": "Hobby",
-    "list": [
-      {
-        "name": "Digital &amp; analog electronic",
-        "anim_slug": "electronic"
-      },
-      {
-        "name": "Skiing",
-        "anim_slug": "skiing"
-      },
-      {
-        "name": "Music",
-        "anim_slug": "music"
-      },
-      {
-        "name": "DIY",
-        "anim_slug": "diy"
-      }
-    ]
+  "home": {
+    "heading": {
+      "title": "Maciej Toborek",
+      "desc": "Hi, I'm Junior Full Stack web developer.",
+      "photo_src": "img/profile.jpg"
+    },
+    "contact": {
+      "list": [
+        {
+          "icon_slug": "mail",
+          "name": "maciej@toborek.io",
+          "href": "mailto:maciej@toborek.io",
+          "target": ""
+        },
+        {
+          "icon_slug": "linkedin",
+          "name": "linkedin.com/in/mac-tob",
+          "href": "https://www.linkedin.com/in/mac-tob",
+          "target": "_blank"
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "desc": "From short videos and UI/UX animations to Wordpress and Laravel applications. Check out my latest projects.",
+      "link": "Explore my work"
+    },
+    "experience": {
+      "title": "Experience",
+      "paragraphs": [
+        {
+          "position": "Freelancer",
+          "heading": "As a <strong>freelancer</strong> I:",
+          "list": [
+            "coded RWD layouts from PSD",
+            "coded scripts in JS",
+            "built apps in Laravel",
+            "built websites based on Wordpress",
+            "created animations in CSS, jQuery",
+            "used GIT version control system"
+          ]
+        },
+        {
+          "position": "Web developer",
+          "heading": "In <strong>niepsuj.it</strong> I:",
+          "list": [
+            "coded RWD layouts from PSD",
+            "worked with team remotely",
+            "built websites based on the Silex PHP framework",
+            "built Wordpress templates",
+            "coded animations with CSS3 &amp; jQuery"
+          ]
+        },
+        {
+          "position": "Trainee",
+          "heading": "In <strong>Mobile Technologies GmbH</strong> I:",
+          "list": [
+            "programmed in C/C++",
+            "worked with team on the speech2speech translator",
+            "tagged voice samples audio"
+          ]
+        },
+        {
+          "position": "Trainee",
+          "heading": "In <strong>Mojito Agencja Kreatywna sp. z o.o.</strong> I:",
+          "list": [
+            "configured Wordpress templates",
+            "coded RWD webistes (Sass, Bootstrap, Foundation)",
+            "coded auction and email templates"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "list": [
+        {
+          "name": "HTML",
+          "value": 95
+        },
+        {
+          "name": "CSS",
+          "value": 85
+        },
+        {
+          "name": "JS",
+          "value": 55
+        },
+        {
+          "name": "jQuery",
+          "value": 90
+        },
+        {
+          "name": "Wordpress",
+          "value": 65
+        },
+        {
+          "name": "PHP",
+          "value": 35
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "list": [
+        {
+          "title": "BSc. of Computer Science",
+          "years": "2014-2018",
+          "desc": "At University of Silesia in Katowice. <br> One outstanding exam to pass"
+        },
+        {
+          "title": "IT technician",
+          "years": "2009-2014",
+          "desc": "At ZSTiL in Czechowice-Dziedzice."
+        }
+      ]
+    },
+    "references": {
+      "title": "References",
+      "list": [
+        {
+          "client": "Samsung",
+          "body": "The UX designers were very impressed at how far you have come with the page, how good it looks and how well things are functioning. Your developers have done a fantastic job!"
+        },
+        {
+          "client": "Mobile Technologies",
+          "body": "Mr. Toborek completed assigned to him work to our full satisfaction. He was always friendly and helpful to his superiors and colleagues."
+        },
+        {
+          "client": "Stalmach",
+          "body": "My admiration to the site has no limits!! The site is great. Really, really good job. We are delighted. I knew from the beginning that cooperation with you would be great, but the results positively surpassed me. Congratulations once again. I will be recommending you with confidence. Thanks again."
+        }
+      ]
+    },
+    "hobby": {
+      "title": "Hobby",
+      "list": [
+        {
+          "name": "Digital &amp; analog electronic",
+          "anim_slug": "electronic"
+        },
+        {
+          "name": "Skiing",
+          "anim_slug": "skiing"
+        },
+        {
+          "name": "Music",
+          "anim_slug": "music"
+        },
+        {
+          "name": "DIY",
+          "anim_slug": "diy"
+        }
+      ]
+    }
   },
   "footer": {
     "body": "Copyright &copy; 2018 | Created by me"
   },
-  "build": "11"
+  "portfolio": {
+    "title": "Portfolio",
+    "slug": "portfolio",
+    "projects": [
+      {
+        "name": "Stalmach",
+        "slug": "stalmach",
+        "desc": "Wordpress website",
+        "thumb": "img/projects/stalmach/thumb.jpg"
+      },
+      {
+        "name": "Neffos",
+        "slug": "neffos",
+        "desc": "Static website",
+        "thumb": "img/projects/neffos/thumb.jpg"
+      },
+      {
+        "name": "HK Logistic",
+        "slug": "hkl",
+        "desc": "Wordpress template",
+        "thumb": "img/projects/hkl/thumb.jpg"
+      },
+      {
+        "name": "Sigmapower",
+        "slug": "sigmapower",
+        "desc": "Wordpress template",
+        "thumb": "img/projects/sigmapower/thumb.jpg"
+      },
+      {
+        "name": "Real Friends",
+        "slug": "real-friends",
+        "desc": "Laravel app",
+        "thumb": "img/projects/rf/thumb.jpg"
+      },
+      {
+        "name": "Pomorscy",
+        "slug": "pomorscy",
+        "desc": "Wordpress template",
+        "thumb": "img/projects/pomorscy/thumb.jpg"
+      },
+      {
+        "name": "Animation",
+        "slug": "glensk",
+        "desc": "Short slider created in Adobe AE",
+        "thumb": "img/projects/glensk/thumb.jpg"
+      },
+      {
+        "name": "Magazyn Praga",
+        "slug": "magazyn-praga",
+        "desc": "SPA with custom slider",
+        "thumb": "img/projects/neffos/thumb.jpg"
+      },
+      {
+        "name": "Syntonic",
+        "slug": "syntonic",
+        "desc": "Wordpress template",
+        "thumb": "img/projects/syntonic/thumb.jpg"
+      },
+      {
+        "name": "MAP",
+        "slug": "map",
+        "desc": "Static website",
+        "thumb": "img/projects/map/thumb.jpg"
+      },
+      {
+        "name": "Welderstal",
+        "slug": "welderstal",
+        "desc": "Application for Android",
+        "thumb": "img/projects/welderstal/thumb.jpg"
+      },
+      {
+        "name": "Skarb Kibica",
+        "slug": "skarb-kibica",
+        "desc": "Application for Android",
+        "thumb": "img/projects/skarb-kibica/thumb.jpg"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "pre_title": "Projects / ",
+    "desc": "Description",
+    "tools": "Tools",
+    "visit_webstie": "Go to website",
+    "stalmach": {
+      "name": "Stalmach",
+      "desc": "I coded Wordpress template based on graphic design provided by the client. ",
+      "href": "http://www.stalmach.pl",
+      "gallery": [
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/stalmach/screen1.jpg",
+          "thumb": "img/projects/stalmach/screen1-thumb.jpg"
+        },
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/stalmach/screen2.jpg",
+          "thumb": "img/projects/stalmach/screen2-thumb.jpg"
+        },
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/stalmach/screen3.jpg",
+          "thumb": "img/projects/stalmach/screen3-thumb.jpg"
+        },
+        {
+          "mockup": "m-sg",
+          "layout": "img/projects/stalmach/screen4.jpg",
+          "thumb": "img/projects/stalmach/screen4-thumb.jpg"
+        }
+      ],
+      "tools": [
+        {
+          "icon": "html5",
+          "name": "HTML 5"
+        },
+        {
+          "icon": "css3",
+          "name": "CSS 3"
+        },
+        {
+          "icon": "js",
+          "name": "Java Script"
+        },
+        {
+          "icon": "wordpress",
+          "name": "Wordpress"
+        },
+        {
+          "icon": "php",
+          "name": "PHP"
+        },
+        {
+          "icon": "jquery",
+          "name": "jQuery"
+        },
+        {
+          "icon": "sass",
+          "name": "Sass"
+        },
+        {
+          "icon": "grunt",
+          "name": "Grunt"
+        },
+        {
+          "icon": "mysql",
+          "name": "MySQL"
+        },
+        {
+          "icon": "git",
+          "name": "GIT"
+        },
+        {
+          "icon": "bootstrap",
+          "name": "Bootstrap"
+        },
+        {
+          "icon": "apache",
+          "name": "Apache server"
+        }
+      ]
+    }
+  },
+  "build": "15"
 }

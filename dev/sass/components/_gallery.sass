@@ -1,5 +1,7 @@
 .c-gallery
-	margin-bottom: 60px
+	
+	+bp($screen-xl)
+		margin-bottom: 60px
 	
 	&__preview
 		border: 2px solid $c-border
@@ -14,6 +16,7 @@
 
 	&__nav
 		margin: 10px -5px
+		margin-bottom: 0
 		position: relative
 
 		#nav-slider
@@ -67,6 +70,7 @@
 			cursor: pointer
 			transition: background-position .2s ease-in-out
 			z-index: 2
+			display: none
 
 			&--next
 				right: -30px

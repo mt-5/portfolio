@@ -3,13 +3,13 @@
 		<div class="col-12">
 			<div class="row align-items-center">
 				<div class="col-lg-5 main-col-left">
-					<div class="c-heading__photo" style="background-image: url('{{ heading.photo_src }}')"></div>
+					<div class="c-heading__photo" style="background-image: url('{{ home.heading.photo_src }}')"></div>
 				</div>
 				<div class="col-lg-7 main-col-right">
-					<h1 class="c-heading__title">{{ heading.title }}</h1>
+					<h1 class="c-heading__title">{{ home.heading.title }}</h1>
 					<hr class="c-heading__hr">
 					<p class="c-heading__text">
-						{{ heading.desc | safe }}
+						{{ home.heading.desc | safe }}
 					</p>
 					<hr class="c-heading__line">
 				</div>
@@ -18,7 +18,7 @@
 				<div class="col-lg-5 main-col-left">
 					<div class="section">
 						<ul class="c-contact">
-							{% for item in contact.list %}
+							{% for item in home.contact.list %}
 							<li class="c-contact__item">
 								<span class="c-contact__item__icon c-contact__item__icon--{{ item.icon_slug }}"></span>
 								<a class="c-contact__item__link" href="{{ item.href }}"{% if item.target %} target="{{ item.target }}"{% endif %}>
@@ -29,25 +29,18 @@
 						</ul>
 					</div>
 					<div class="section">
-						<h2>{{ projects_previews.title }}</h2>
+						<h2>{{ home.portfolio.title }}</h2>
 						<hr>
-						<a href="#projects" class="c-projects" id="open_projects">
-							<div class="c-projects__display" id="slider">
-								{% for page_thumb in projects_previews.pages %}
-								<img class="" src="{{ page_thumb }}" />
-								{% endfor %}
-							</div>
-							<div class="overlay">
-								<span>{{ projects_previews.more }}</span>
-							</div>
-						</a>
+						<div class="text-center text-sm-left">
+							<a href="#{{ portfolio.slug }}" class="c-button p-home__link">{{ home.portfolio.link }}</a>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-7 main-col-right section">
-					<h2>{{ experience.title }}</h2>
+					<h2>{{ home.experience.title }}</h2>
 					<hr>
 					<div class="row c-experience">
-						{% for paragraph in experience.paragraphs %}
+						{% for paragraph in home.experience.paragraphs %}
 						<div class="col-sm-6 c-experience__pg">
 							<h3 class="c-experience__pg__title">
 								<span class="c-experience__pg__title__number">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span> 
@@ -66,10 +59,10 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-5 main-col-left section">
-					<h2>{{ skills.title }}</h2>
+					<h2>{{ home.skills.title }}</h2>
 					<hr>
 					<ul class="c-skills">
-						{% for item in skills.list %}
+						{% for item in home.skills.list %}
 						<li class="c-skills__item">
 							<span class="c-skills__item__name">{{ item.name }}</span>
 							<div class="c-skills__item__progressbar">
@@ -82,10 +75,10 @@
 
 				</div>
 				<div class="col-lg-7 main-col-right section">
-					<h2>{{ education.title }}</h2>
+					<h2>{{ home.education.title }}</h2>
 					<hr>
 					<ul class="c-education">
-						{% for item in education.list %}
+						{% for item in home.education.list %}
 						<li class="c-education__item" data-bottom-top="transform: translate3d(0,100px,0);" data--100-bottom="transform: translate3d(0,0px,0);">
 							<h3 class="c-education__item__title">{{ item.title | safe }}</h3>
 							<h4 class="c-education__item__years">{{ item.years | safe }}</h4>
@@ -97,10 +90,10 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-5 main-col-left section">
-					<h2>{{ references.title }}</h2>
+					<h2>{{ home.references.title }}</h2>
 					<hr>
 					<ul class="c-references">
-						{% for item in references.list %}
+						{% for item in home.references.list %}
 						<li class="c-references__item" data-bottom-top="transform: translate3d(0,100px,0); opacity: 0;" data--30-bottom="transform: translate3d(0,0px,0); opacity: 1;">
 							<h3>{{ item.client }}</h3>
 							<p>{{ item.body | safe }}</p>
@@ -109,10 +102,10 @@
 					</ul>
 				</div>
 				<div class="col-lg-7 main-col-right section">
-					<h2>{{ hobby.title }}</h2>
+					<h2>{{ home.hobby.title }}</h2>
 					<hr>
 					<div class="row c-hobby">
-						{% for item in hobby.list %}
+						{% for item in home.hobby.list %}
 						<div class="col-sm-6 c-hobby__item" data-bottom-top="opacity: 0;" data--30-bottom="opacity: 1;">
 							<div class="c-hobby__item__anim c-hobby__item__anim--{{ item.anim_slug }}">
 								<figure></figure><figure></figure><figure></figure><figure></figure><figure></figure><figure></figure>

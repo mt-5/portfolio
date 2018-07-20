@@ -1,8 +1,12 @@
-module.exports = function(callback, onLoadingCallback) {
+module.exports = function(wrapperSelector, callback, onLoadingStepCallback) {
 
 	var assets = [];
 	var totalAssets  = 0;
 	var loaded = 0;
+	var wrapper = document;
+
+	if(wrapperSelector)
+		wrapper = document.querySelector(wrapperSelector);
 
 	var loadedAsset = function(){
 		var percent = 0;
@@ -13,24 +17,25 @@ module.exports = function(callback, onLoadingCallback) {
 		else
 			percent = 100;
 
-		console.log('Downloading assets: ' + percent + '%');
-
-		if(onLoadingCallback) {
+		if(onLoadingStepCallback) {
 			data = {
 				loaded: loaded,
 				total: totalAssets,
 				percent: percent
 			}
-			onLoadingCallback(data);
+			onLoadingStepCallback(data);
 		}
 
 		if(loaded === totalAssets){
+			if(ENV === 'dev')
+				console.log('Loaded ' + totalAssets + ' assets.');
+
 			callback();
 		}
 	};
 
 	//Adding assets by attribute src
-	var imgs = document.getElementsByTagName('img[src!=""]');
+	var imgs = wrapper.getElementsByTagName('img[src!=""]');
 	for (var i = 0, max = imgs.length; i < max; i++) {
 		var url = imgs[i].getAttribute('src');
 		if(null !== url && false !== url.empty())
@@ -38,7 +43,7 @@ module.exports = function(callback, onLoadingCallback) {
 	}
 
 	//Adding assets by style properties
-	var DOM = document.getElementsByTagName("*");
+	var DOM = wrapper.getElementsByTagName("*");
 	for (var i = 0, max = DOM.length; i < max; i++) {
 		var url = window.getComputedStyle(DOM[i], false).backgroundImage;
 
@@ -49,6 +54,9 @@ module.exports = function(callback, onLoadingCallback) {
 	}
 
 	var totalAssets = assets.length;
+
+	if(ENV === 'dev')
+		console.log('Downloading ' + totalAssets + ' assets...');
 
 	if(0 === totalAssets) {
 		loadedAsset();

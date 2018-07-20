@@ -2,124 +2,80 @@
 	<div class="row">
 		<div class="col-12 p-project__heading">
 			<div>
-				<h1>Projects / Stalmach</h1>
+				<h1>{{ portfolio.title }} / {{ projects.stalmach.name }}</h1>
 				<hr>
 			</div>
-			<a href="#projects" class="p-project__heading__close"></a>
+			<a href="#{{ portfolio.slug }}" class="p-project__heading__close"></a>
 		</div>
 		<div class="col-xl-8">
-			<div class="c-gallery">
-				<div class="c-gallery__preview" id="gallery-preview" style="background-image: url('img/projects/stalmach/mockup_preview.jpg')">
-					<div class="c-mockup" id="mockup-scroll">
-						<div class="c-mockup__display">
-							<div class="c-mockup__screen mcks-display">
-								<img src="img/projects/stalmach/mockup_page.jpg" class="mcks-page" alt="Website screenshot">
+			<div class="c-gallery" id="gallery">
+				<div class="c-gallery__preview">
+					<div class="c-mockup-sg mockup" id="m-sg">
+						<div class="phone">
+							<div class="screen">
+								<img class="website" alt="Website layout">
 							</div>
+						</div>
+						<div class="keyboard"></div>
+						<div class="succulent"></div>
+					</div>
+
+					<div class="c-mockup-ss mockup" id="m-ss">
+						<div class="display">
+							<div class="screen">
+								<img class="website" alt="Website layout">
+							</div>
+						</div>
+					</div>
+					<div class="c-mockup-def mockup" id="m-def">
+						<div class="screen">
+							<img class="website" alt="Website layout">
 						</div>
 					</div>
 				</div>
 				<div class="c-gallery__nav">
-					<div id="nav-slider">
-						<a data-src="img/projects/stalmach/mockup_preview.jpg" data-mockup="true" class="c-gallery__nav__link active" style="background-image: url('img/projects/stalmach/mockup_preview.jpg');"></a>
-						<a data-src="img/projects/stalmach/screen2.jpg" class="c-gallery__nav__link" style="background-image: url('img/projects/stalmach/screen2.jpg');"></a>
-						<a data-src="img/projects/stalmach/screen3.jpg" class="c-gallery__nav__link" style="background-image: url('img/projects/stalmach/screen3.jpg');"></a>
+					<div id="nav">
+						{% for item in projects.stalmach.gallery %}
+						    <a data-src="{{ item.layout }}" data-mockup="{{ item.mockup }}" class="c-gallery__nav__link  nav_link{% if loop.index == 1 %} active{% endif %}" style="background-image: url('{{ item.thumb }}');"></a>
+						{% endfor %}
 					</div>
 					<button class="c-gallery__nav__btn c-gallery__nav__btn--prev" id="nav-prev"></button>
 					<button class="c-gallery__nav__btn c-gallery__nav__btn--next" id="nav-next"></button>
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-4">
+
+		<div class="col-xl-4 d-flex flex-direction-column justify-content-between">
 			<div class="row flex-row-reverse">
-				<div class="col-md-6 col-xl-12 section">
-					<h2>Description</h2>
+				<div class="col-md-6 col-xl-12 p-project__section">
+					<h2>{{ projects.desc }}</h2>
 					<hr>
 					<p class="text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis modi, exercitationem reprehenderit quidem obcaecati. Esse totam doloribus sequi officiis rem, sunt ut error quae ex! Impedit non quibusdam cum reiciendis.
+						{{ projects.stalmach.desc | safe }}
 					</p>
 				</div>
-				<div class="col-md-6 col-xl-12 section">
-					<h2>Tools</h2>
+				<div class="col-md-6 col-xl-12">
+					<h2>{{ projects.tools }}</h2>
 					<hr>
 					<ul class="c-tools">
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--html5"></span>
-								<span class="desc">HTML</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--css3"></span>
-								<span class="desc">CSS</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--js"></span>
-								<span class="desc">JS</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--wordpress"></span>
-								<span class="desc">Wordpress</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--php"></span>
-								<span class="desc">PHP</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--jquery"></span>
-								<span class="desc">jQuery</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--sass"></span>
-								<span class="desc">Sass</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--grunt"></span>
-								<span class="desc">Grunt</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--mysql"></span>
-								<span class="desc">MySQL</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--git"></span>
-								<span class="desc">GIT</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--bootstrap"></span>
-								<span class="desc">Bootstrap</span>
-							</div>
-						</li>
-						<li class="c-tools__item">
-							<div class="box">
-								<span class="icon icon--apache"></span>
-								<span class="desc">Apache</span>
-							</div>
-						</li>
+						{% for tool in projects.stalmach.tools %}
+						    <li class="c-tools__item">
+								<div class="box">
+									<span class="icon icon--{{ tool.icon }}"></span>
+									<span class="desc">{{ tool.name }}</span>
+								</div>
+							</li>
+						{% endfor %}
 					</ul>
 				</div>
-				<div class="col-12 text-center text-md-right">
-					<a href="http://stalmach.pl" target="_blank" class="p-project__link">Go to website</a>
-				</div>
 			</div>
+			{% if projects.stalmach.href %}
+				<div class="row align-self-md-end">
+					<div class="col-12 text-center text-md-right">
+						<a href="{{ projects.stalmach.href }}" target="_blank" class="c-button p-project__link">{{ projects.visit_webstie }}</a>
+					</div>
+				</div>
+			{% endif %}
 		</div>
 	</div>
 </div>
