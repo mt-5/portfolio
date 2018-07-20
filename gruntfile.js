@@ -75,7 +75,7 @@ module.exports = function (grunt) {
 					{
 						expand: true, 
 						cwd: 'dev/pages/', 
-						src: "*.nunjucks", 
+						src: "**/*.nunjucks", 
 						dest: "dev/", 
 						ext: ".html"
 					}
