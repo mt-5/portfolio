@@ -31,7 +31,7 @@ module.exports = function(viewsPath, wrapperSelector, loaderSelector){
 			else
 				document.title = baseTitle;
 
-			if(ENV === 'dev')
+			if(typeof DEV !== 'undefined')
 				console.log('Current view: "' + name + '"');
 			
 			waitForAssets('#main-wrapper', function() {

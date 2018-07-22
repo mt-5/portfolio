@@ -58,7 +58,7 @@
 
 	{% if target == 'dev' %}
 	<script type="text/javascript">
-		const ENV = 'dev';
+		var DEV = true;
 		console.log('Build: {{ build }}');
 	</script>
 	<script type="text/javascript" src="js/vendor.js"></script>

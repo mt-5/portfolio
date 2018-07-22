@@ -12,8 +12,6 @@ module.exports = function(){
 	var skrlr = Skrollr.init({forceHeight: false});
 	var view = new ViewController(window.location.origin + '/views', '#main-wrapper', '#progressbar');
 
-	console.log(window.location.host);
-
 	router.on('portfolio/:name', function (params) {
 		view.load('projects/' + params.name, function(){
 			var glry = new Gallery();

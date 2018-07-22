@@ -27,7 +27,7 @@ module.exports = function(wrapperSelector, callback, onLoadingStepCallback) {
 		}
 
 		if(loaded === totalAssets){
-			if(ENV === 'dev')
+			if(typeof DEV !== 'undefined')
 				console.log('Loaded ' + totalAssets + ' assets.');
 
 			callback();
@@ -55,7 +55,7 @@ module.exports = function(wrapperSelector, callback, onLoadingStepCallback) {
 
 	var totalAssets = assets.length;
 
-	if(ENV === 'dev')
+	if(typeof DEV !== 'undefined')
 		console.log('Downloading ' + totalAssets + ' assets...');
 
 	if(0 === totalAssets) {
