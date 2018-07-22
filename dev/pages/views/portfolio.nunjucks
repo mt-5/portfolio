@@ -5,7 +5,7 @@
 				<h1>{{ portfolio.title }}</h1>
 				<hr>
 			</div>
-			<a href="/" class="c-projects-grid__heading__back" data-navigo></a>
+			<a href="" class="c-projects-grid__heading__back" data-navigo></a>
 		</div>
 		
 		{% for project in portfolio.projects %}

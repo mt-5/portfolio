@@ -1,12 +1,8 @@
-module.exports = function(wrapperSelector, callback, onLoadingStepCallback) {
+module.exports = function(wrapper, afterCallback, onLoadingStepCallback) {
 
 	var assets = [];
 	var totalAssets  = 0;
 	var loaded = 0;
-	var wrapper = document;
-
-	if(wrapperSelector)
-		wrapper = document.querySelector(wrapperSelector);
 
 	var loadedAsset = function(){
 		var percent = 0;
@@ -30,7 +26,7 @@ module.exports = function(wrapperSelector, callback, onLoadingStepCallback) {
 			if(typeof DEV !== 'undefined')
 				console.log('Loaded ' + totalAssets + ' assets.');
 
-			callback();
+			afterCallback();
 		}
 	};
 
