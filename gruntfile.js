@@ -6,17 +6,18 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		hash: "12345678".split('').map(function(){return 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(62*Math.random()));}).join(''),
 
 		sass: {
 			options: {
 				includePaths: ['node_modules/bootstrap/scss']
 			},
 			dev: {
-                options: {
-                    style: 'expanded',
-                    sourcemap: 'none',
-                    noCache: true
-                },
+				options: {
+					style: 'expanded',
+					sourcemap: 'none',
+					noCache: true
+				},
 				files: {
 					'dev/css/style.css': 'dev/sass/style.sass'
 				}
@@ -46,20 +47,20 @@ module.exports = function (grunt) {
 		postcss: {
 			options: {
 				processors: [
-			        require('autoprefixer')({
-			        		browsers: ['last 10 versions', 'ie 8', 'ie 9'],
-                    		diff: true 
-                    	}), // add vendor prefixes
-			        require('cssnano')() // minify the result
-		        ]
-		    },
-		    build: { expand: true, flatten: true, src: 'dev/css/*.css', dest: 'build/css' },
+					require('autoprefixer')({
+						browsers: ['last 10 versions', 'ie 8', 'ie 9'],
+						diff: true 
+					}), // add vendor prefixes
+					require('cssnano')() // minify the result
+				]
+			},
+			build: { flatten: true, src: 'dev/css/style.css', dest: 'build/css/style.<%= hash %>.css' },
 		},
 		uglify: {
 			options: { mangle: true, compress: true },
 			build: {
 				files: {
-					'build/js/scripts.js' : [ 'dev/js/vendor.js', 'dev/js/script.js' ]
+					'build/js/scripts.<%= hash %>.js' : [ 'dev/js/vendor.js', 'dev/js/script.js' ]
 				}
 			}
 		},
@@ -71,7 +72,7 @@ module.exports = function (grunt) {
 				options: {
 					configureEnvironment: function(env, nunjucks) { env.addGlobal('target', 'dev'); },
 				},
-			    files: [
+				files: [
 					{
 						expand: true, 
 						cwd: 'dev/pages/', 
@@ -79,22 +80,22 @@ module.exports = function (grunt) {
 						dest: "dev/", 
 						ext: ".html"
 					}
-			    ]
+				]
 			},
 			build: {
 				options: {
 					data: grunt.file.readJSON('data.json'),
 					configureEnvironment: function(env, nunjucks) { env.addGlobal('target', 'build'); },
 				},
-			    files: [
-			    	{
+				files: [
+					{
 						expand: true, 
 						cwd: 'dev/pages/', 
 						src: ["**/*.nunjucks", "!templates/**"], 
 						dest: "build/", 
 						ext: ".html"
 					}
-			    ]
+				]
 			}
 		},
 		htmlmin: {
@@ -150,26 +151,26 @@ module.exports = function (grunt) {
 			}
 		},
 		buildnumber: {
-            options: {
-              field: 'build',
-            },
-            files: ['data.json']
-        },
-        shell: {
-        	deploy: {
-        		command: [
-        			'echo Uploading app to server...',
-        			'scp build.zip maciej@toborek.io:build.zip',
-        			'echo Deleting files on server...',
-        			'ssh maciej@toborek.io "rm -rf www/*"',
-        			'echo Unpacking files...',
-        			'ssh maciej@toborek.io "unzip -q build.zip -d www/"',
-        			'echo Deleting temp files...',
-        			'ssh maciej@toborek.io "rm build.zip"',
-        			'echo Finish!'
-        		].join('&&')
-        	}
-        }
+			options: {
+			  field: 'build',
+			},
+			files: ['data.json']
+		},
+		shell: {
+			deploy: {
+				command: [
+					'echo Uploading app to server...',
+					'scp build.zip maciej@toborek.io:build.zip',
+					'echo Deleting files on server...',
+					'ssh maciej@toborek.io "rm -rf www/*"',
+					'echo Unpacking files...',
+					'ssh maciej@toborek.io "unzip -q build.zip -d www/"',
+					'echo Deleting temp files...',
+					'ssh maciej@toborek.io "rm build.zip"',
+					'echo Finish!'
+				].join('&&')
+			}
+		}
 	});
 
 	grunt.registerTask('compile', 	['sass', 'browserify', 'clean:html', 'nunjucks:dev'] );

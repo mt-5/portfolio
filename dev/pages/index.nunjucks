@@ -38,8 +38,13 @@
 	<style>
 		*{margin:0}body,html{width:100%;height:100%}body{overflow-y:scroll}body .c-loader{position:fixed;z-index:100;width:calc(100% + 13px);height:100vh;display:flex;align-items:center;justify-content:center;opacity:0;background-color:#fff;transition:opacity .2s ease-in-out,visibility 0s .2s linear;visibility:hidden}body.loading .c-loader{transition-delay:0s;opacity:1;visibility:visible}.c-loader__progressbar{width:200px;height:12px;border:2px solid #000;overflow:hidden}.c-loader__progressbar__bar{height:100%;background-color:#000;width:0%;transition:width .3s ease-in-out}
 	</style>
+	
+	{% if target == 'dev' %}
+		<link href="/css/style.css" rel="stylesheet">
+	{% else %}
+		<link href="/css/style.{{ build }}.css" rel="stylesheet">
+	{% endif %}
 
-	<link href="/css/style.css" rel="stylesheet">
 </head>
 <body class="loading">
 	<div class="c-loader" id="loader">
@@ -57,16 +62,15 @@
 	</div>
 
 	{% if target == 'dev' %}
-	<script type="text/javascript">
-		var DEV = true;
-		console.log('Build: {{ build }}');
-	</script>
-	<script type="text/javascript" src="js/vendor.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript"></script>
+		<script type="text/javascript">
+			var DEV = true;
+			console.log('Build: {{ build }}');
+		</script>
+		<script type="text/javascript" src="js/vendor.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript"></script>
 	{% else %}
-	<script type="text/javascript" src="js/scripts.js"></script>
-	<!-- Build: {{ build }} -->
+		<script type="text/javascript" src="js/scripts.{{ build }}.js"></script>
 	{% endif %}
 </body>
 </html>
