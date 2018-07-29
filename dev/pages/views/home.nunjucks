@@ -21,7 +21,7 @@
 							{% for item in home.contact.list %}
 							<li class="c-contact__item">
 								<span class="c-contact__item__icon c-contact__item__icon--{{ item.icon_slug }}"></span>
-								<a class="c-contact__item__link" href="{{ item.href }}"{% if item.target %} target="{{ item.target }}"{% endif %}>
+								<a class="c-contact__item__link animated" href="{{ item.href }}"{% if item.target %} target="{{ item.target }}"{% endif %}>
 									{{ item.name }}
 								</a>
 							</li>

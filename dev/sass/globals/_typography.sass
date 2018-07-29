@@ -33,9 +33,7 @@ p
 		margin-top: 40px
 		margin-bottom: 20px
 
-a 
-	position: relative
-	
+a 	
 	&,
 	&:hover,
 	&:focus,
@@ -44,18 +42,21 @@ a
 		color: $c-text
 		text-decoration: none
 
-	&:before 
-		content: ''
-		position: absolute
-		bottom: 0px
-		left: 0
-		width: 0%
-		height: 2px
-		background-color: $c-text
-		transition: width .15s ease-in-out
+	&.animated
+		position: relative
 
-	&:hover:before
-		width: 100%
+		&:before 
+			content: ''
+			position: absolute
+			bottom: 0px
+			left: 0
+			width: 0%
+			height: 2px
+			background-color: $c-text
+			transition: width .15s ease-in-out
+
+		&:hover:before
+			width: 100%
 
 hr
 	width: 35px
