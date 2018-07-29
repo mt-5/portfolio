@@ -34,6 +34,12 @@
           "name": "linkedin.com/in/mac-tob",
           "href": "https://www.linkedin.com/in/mac-tob",
           "target": "_blank"
+        },
+        {
+          "icon_slug": "github",
+          "name": "github.com/toboriusz",
+          "href": "https://github.com/toboriusz",
+          "target": "_blank"
         }
       ]
     },
