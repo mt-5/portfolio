@@ -27,7 +27,10 @@ module.exports = function (grunt) {
 			grunt: { files: ['gruntfile.js'] },
 			sass: {
 				files: [ 'dev/sass/**/*.{sass,scss}' ],
-				tasks: [ 'sass' ]
+				tasks: [ 'sass' ],
+				options: {
+			      livereload: true,
+			    },
 			},
 			js: {
 				files: [ 'dev/js/**/*.js', '!dev/js/{script,vendor}.js'  ],

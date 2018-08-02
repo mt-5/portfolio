@@ -66,11 +66,11 @@
 			var DEV = true;
 			console.log('Build: {{ build }}');
 		</script>
-		<script type="text/javascript" src="js/vendor.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
-		<script type="text/javascript"></script>
+		<script src="js/vendor.js"></script>
+		<script src="js/script.js"></script>
+		<script src="//localhost:35729/livereload.js"></script>
 	{% else %}
-		<script type="text/javascript" src="js/scripts.{{ build }}.js"></script>
+		<script src="js/scripts.{{ build }}.js"></script>
 	{% endif %}
 </body>
 </html>
