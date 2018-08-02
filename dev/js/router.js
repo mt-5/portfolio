@@ -6,7 +6,11 @@ module.exports = function(){
 	//Global variables
 	const ViewController = require('./view');
 	var router = new Navigo();
-	var skrlr = Skrollr.init({forceHeight: false});
+	var skrlr = null;
+	
+	if(!isMobile())
+		var skrlr = Skrollr.init({forceHeight: false});
+
 	var view = new ViewController({
 		viewsPath: window.location.origin + '/views',
 		wrapperSelector: '#main-wrapper',
@@ -15,6 +19,9 @@ module.exports = function(){
 
 	view.after(function() {
 		router.updatePageLinks();
+
+		if(skrlr)
+			skrlr.refresh();
 	});
 
 	router.on('portfolio/:name', function (params) {
@@ -27,13 +34,11 @@ module.exports = function(){
 
 	router.on('portfolio', function () {
 		view.load('portfolio', function() {
-			skrlr.refresh();
 		});
 	});
 
 	router.on(function () {
 		view.load('home', function() {
-			skrlr.refresh();
 		});
 	});
 
