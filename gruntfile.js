@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		hash: "12345678".split('').map(function(){return 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(62*Math.random()));}).join(''),
+	build: parseInt(grunt.file.readJSON('data.json').build),
 
 		sass: {
 			options: {
@@ -24,13 +24,13 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
+			options: {
+				livereload: true,
+			},
 			grunt: { files: ['gruntfile.js'] },
 			sass: {
 				files: [ 'dev/sass/**/*.{sass,scss}' ],
-				tasks: [ 'sass' ],
-				options: {
-			      livereload: true,
-			    },
+				tasks: [ 'sass' ]
 			},
 			js: {
 				files: [ 'dev/js/**/*.js', '!dev/js/{script,vendor}.js'  ],
@@ -57,13 +57,13 @@ module.exports = function (grunt) {
 					require('cssnano')() // minify the result
 				]
 			},
-			build: { flatten: true, src: 'dev/css/style.css', dest: 'build/css/style.<%= hash %>.css' },
+			build: { flatten: true, src: 'dev/css/style.css', dest: 'build/css/style.<%= build %>.css' },
 		},
 		uglify: {
 			options: { mangle: true, compress: true },
 			build: {
 				files: {
-					'build/js/scripts.<%= hash %>.js' : [ 'dev/js/vendor.js', 'dev/js/script.js' ]
+					'build/js/scripts.<%= build %>.js' : [ 'dev/js/vendor.js', 'dev/js/script.js' ]
 				}
 			}
 		},

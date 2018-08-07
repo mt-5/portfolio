@@ -6,8 +6,8 @@
   "lang": "en",
   "meta": {
     "title": "Maciej Toborek",
-    "keywords": "web developer, full stack develper, front end developer, portfolio",
-    "description": "Hi, it's me - full of creativity, energetic developer. If you're willing to hire me, write boldly ;)"
+    "keywords": "web developer, full stack develper, front end developer, back end developer, portfolio",
+    "description": "Hello! It's me - full stack of creativity web developer. If you're willing to hire me, write boldly ;)"
   },
   "og": {
     "title": "",
@@ -18,8 +18,9 @@
   "home": {
     "heading": {
       "title": "Maciej Toborek",
-      "desc": "Hi, I'm Junior Full Stack web developer.",
-      "photo_src": "img/profile.jpg"
+      "subtitle": "Junior Full Stack Web Developer",
+      "desc": "Hey! I'm 23 years old junior web developer living in London, born in Poland. My main skills are HTML/CSS, jQuery &amp; Wordpress.",
+      "photo_src": "img/profile2_c.jpg"
     },
     "contact": {
       "list": [
@@ -45,8 +46,8 @@
     },
     "portfolio": {
       "title": "Portfolio",
-      "desc": "From short videos and UI/UX animations to Wordpress and Laravel applications. Check out my latest projects.",
-      "link": "Explore my work"
+      "desc": "From animated presentation to Wordpress and Laravel applications. Check out my projects:",
+      "link": "Explore"
     },
     "experience": {
       "title": "Experience",
@@ -99,11 +100,11 @@
       "list": [
         {
           "name": "HTML",
-          "value": 85
+          "value": 90
         },
         {
           "name": "CSS",
-          "value": 75
+          "value": 85
         },
         {
           "name": "JS",
@@ -111,7 +112,7 @@
         },
         {
           "name": "jQuery",
-          "value": 80
+          "value": 85
         },
         {
           "name": "Wordpress",
@@ -123,11 +124,11 @@
         },
         {
           "name": "MySQL",
-          "value": 50
+          "value": 45
         },
         {
           "name": "Laravel",
-          "value": 65
+          "value": 55
         }
       ]
     },
@@ -137,12 +138,12 @@
         {
           "title": "BSc. of Computer Science",
           "years": "2014-2018",
-          "desc": "At University of Silesia in Katowice. <br> One outstanding exam to pass"
+          "desc": "At University of Silesia in Katowice, Poland. <br> One outstanding exam to pass"
         },
         {
           "title": "IT technician",
           "years": "2009-2014",
-          "desc": "At ZSTiL in Czechowice-Dziedzice."
+          "desc": "At ZSTiL in Czechowice-Dziedzice, Poland."
         }
       ]
     },
@@ -284,5 +285,5 @@
       ]
     }
   },
-  "build": "32"
+  "build": "37"
 }

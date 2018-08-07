@@ -153,9 +153,6 @@
 
 				figure:nth-of-type(2)
 					@keyframes fadeOut1
-						33%
-							transform: translate(100px, -20px)
-							opacity: 0
 						100%
 							transform: translate(100px, -20px)
 							opacity: 0
@@ -166,13 +163,10 @@
 					height: 20px
 					opacity: 1
 					background-image: url(#{$icons}/note.svg)
-					animation: fadeOut1 10s ease-out infinite
+					animation: fadeOut1 2.5s ease-out 1s infinite
 
 				figure:nth-of-type(3)
 					@keyframes fadeOut2
-						20%
-							transform: translate(60px, -15px)
-							opacity: 0
 						100%
 							transform: translate(60px, -15px)
 							opacity: 0
@@ -183,27 +177,12 @@
 					height: 20px
 					background-image: url(#{$icons}/note2.svg)
 					opacity: 1
-					animation: fadeOut2 8s ease-out 0 infinite
+					animation: fadeOut2 2s ease-out .3s infinite
 
 				figure:nth-of-type(4)
 					@keyframes fadeOut3
-						20%
-							transform: translate(55px, -10px)
-							opacity: 0
-						20.1%
-							transform: translate(0,0)
-							opacity: 0
-						50%
-							transform: translate(0,0)
-							opacity: 0
-						51%
-							transform: translate(0,0)
-							opacity: 1
-						75%
-							transform: translate(50px, 0px)
-							opacity: 0
 						100%
-							transform: translate(50px, 0px)
+							transform: translate(55px, -10px)
 							opacity: 0
 
 					top: 45px
@@ -212,23 +191,21 @@
 					height: 20px
 					background-image: url(#{$icons}/note2.svg)
 					opacity: 1
-					animation: fadeOut3 12s ease-out 4s infinite
+					animation: fadeOut3 2s ease-out .7s infinite
 
 				figure:nth-of-type(5)
 					@keyframes fadeOut4
-						20%
-							transform: translate(55px, -2px)
-							opacity: 0
 						100%
 							transform: translate(55px, -2px)
 							opacity: 0
+
 					top: 60px
 					left: 86px
 					width: 20px
 					height: 20px
 					background-image: url(#{$icons}/note.svg)
 					opacity: 1
-					animation: fadeOut4 7s ease-out 5s infinite
+					animation: fadeOut4 2s ease-out .9s infinite
 			
 			&--diy
 				

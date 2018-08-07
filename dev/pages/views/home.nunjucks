@@ -1,13 +1,16 @@
 <div class="p-home">
 	<div class="row">
 		<div class="col-12">
-			<div class="row align-items-center">
+			<div class="row align-items-center c-heading">
 				<div class="col-lg-5 main-col-left">
 					<div class="c-heading__photo" style="background-image: url('{{ home.heading.photo_src }}')"></div>
 				</div>
 				<div class="col-lg-7 main-col-right">
 					<h1 class="c-heading__title">{{ home.heading.title }}</h1>
 					<hr class="c-heading__hr">
+					<p class="c-heading__subtitle">
+						{{ home.heading.subtitle | safe }}
+					</p>
 					<p class="c-heading__text">
 						{{ home.heading.desc | safe }}
 					</p>

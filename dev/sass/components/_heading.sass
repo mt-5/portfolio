@@ -1,9 +1,10 @@
 .c-heading
-	
+	margin-bottom: 20px
+
 	&__photo
 		@keyframes motion
 			50%
-				transform: rotate(2deg)
+				transform: rotate(0deg)
 
 		width: 250px
 		height: 250px
@@ -12,7 +13,7 @@
 		background-size: cover
 		background-position: center
 		margin-bottom: 40px
-
+		transform: rotate(-3deg)
 		animation: motion .5s 1s ease-in-out 
 
 		+bp($screen-lg)
@@ -31,13 +32,15 @@
 		+bp($screen-sm)
 			text-align: center
 
+	&__subtitle
+		margin-top: 15px
+		font-size: 20px
+
 	&__text
 		font-size: 18px
-		margin-top: 25px
-		margin-bottom: 50px
-
-		+bp($screen-lg)
-			margin-bottom: 25px
+		margin-top: 20px
+		margin-bottom: 30px
+		color: $c-text-faded
 
 		+bp($screen-sm)
 			text-align: center
