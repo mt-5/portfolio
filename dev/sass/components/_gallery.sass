@@ -15,12 +15,15 @@
 		transition: background-image .3s ease-in-out
 
 	&__nav
-		margin: 10px -5px
+		margin: 10px 0px
 		margin-bottom: 0
 		position: relative
 
-		#nav-slider
-			cursor: initial !important
+		&__container
+			overflow: hidden
+
+		&__slider
+			margin: 0 -5px 
 
 		&__link
 			position: relative
@@ -68,19 +71,22 @@
 			display: none
 
 			&--next
-				right: -30px
+				right: -40px
 				transform: translateY(-50%)
 				+bp($screen-sm)
-					right: 8px
+					right: -15px
 
 			&--prev
-				left: -30px
+				left: -40px
 				transform: translateY(-50%) rotate(180deg)
 				+bp($screen-sm)
-					left: 8px
+					left: -15px
 
 			&:hover
 				background-position: 5px center 
 
 			+bp($screen-sm)
-				opacity: 0.5
+				width: 10px
+				height: 10px
+				background-image:  url('#{$icons}/arrow-small.svg')
+				background-size: 8px

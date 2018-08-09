@@ -15,6 +15,8 @@ module.exports = function(){
 	
 	var scrolling = function(){
 
+		onScroll();
+
 		scroll += Math.round((dest - scroll) * speed * 10) / 10;
 
 		page.style.transform = 'translate3d(0,' + (-scroll) + 'px,0)';
@@ -51,13 +53,9 @@ module.exports = function(){
 		if(!enabled) {
 			wrapper.addEventListener('mousemove', updateCoords, false);
 			wrapper.addEventListener('mouseenter', updateCoords, false);
-			window.addEventListener('scroll', onScroll, false);
-			window.addEventListener('resize', onResize, false);
 			enabled = true;
-			onScroll();
 			scrolling();
-			wrapper.classList.add('shown');	
-
+			wrapper.classList.add('shown');
 		}
 	};
 
@@ -65,12 +63,10 @@ module.exports = function(){
 		if(enabled) {
 			wrapper.removeEventListener('mousemove', updateCoords, false);
 			wrapper.removeEventListener('mouseenter', updateCoords, false);
-			window.removeEventListener('scroll', onScroll, false);
-			window.removeEventListener('resize', onResize, false);
 			enabled = false;
 			wrapper.classList.remove('shown');
 		}
-	}
+	};
 
 	var init = function(wrapperSelector) {
 		wrapper = document.querySelector(wrapperSelector);
@@ -84,11 +80,7 @@ module.exports = function(){
 		wrapper.classList.add('animate');
 
 		name = wrapper.getAttribute('id');
-	}
-
-	var onResize  = function() {
-		dest = 0;
-	}
+	};
 
 	var load = function(imgsrc) {
 		page.style.opacity = 0;
@@ -101,11 +93,11 @@ module.exports = function(){
         	page.style.opacity = 1;
         };
         img.src = imgsrc;
-	}
+	};
 
 	var getWrapper = function() {
 		return wrapper;
-	}
+	};
 
 
 	return {
@@ -114,5 +106,5 @@ module.exports = function(){
 		start: start,
 		destroy: destroy,
 		getWrapper: getWrapper
-	}
+	};
 };

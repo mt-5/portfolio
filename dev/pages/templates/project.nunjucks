@@ -34,10 +34,12 @@
 					</div>
 				</div>
 				<div class="c-gallery__nav">
-					<div id="nav">
-						{% for item in content.gallery %}
-						    <a data-src="{{ item.layout }}" data-mockup="{{ item.mockup }}" class="c-gallery__nav__link  nav_link{% if loop.index == 1 %} active{% endif %}" style="background-image: url('{{ item.thumb }}');"></a>
-						{% endfor %}
+					<div class="c-gallery__nav__container">
+						<div class="c-gallery__nav__slider" id="nav">
+							{% for item in content.gallery %}
+							    <a data-src="{{ item.layout }}" data-mockup="{{ item.mockup }}" class="c-gallery__nav__link  nav_link{% if loop.index == 1 %} active{% endif %}" style="background-image: url('{{ item.thumb }}');"></a>
+							{% endfor %}
+						</div>
 					</div>
 					<button class="c-gallery__nav__btn c-gallery__nav__btn--prev" id="nav-prev"></button>
 					<button class="c-gallery__nav__btn c-gallery__nav__btn--next" id="nav-next"></button>

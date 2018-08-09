@@ -1,3 +1,4 @@
+env.json
 node_modules/
 dev/js/script.js
 dev/js/vendor.js

@@ -25,7 +25,9 @@ module.exports = function (grunt) {
 		},
 		watch: {
 			options: {
-				livereload: true,
+				livereload: {
+					host: '192.168.0.10'
+				}
 			},
 			grunt: { files: ['gruntfile.js'] },
 			sass: {
@@ -69,7 +71,7 @@ module.exports = function (grunt) {
 		},
 		nunjucks: {
 			options: {
-				data: grunt.file.readJSON('data.json')
+				data:  Object.assign(grunt.file.readJSON('data.json'), grunt.file.readJSON('env.json'))
 			},
 			dev: {
 				options: {

@@ -1,8 +1,4 @@
 {
-  "server_name": {
-    "dev": "http://portfolio3.lc",
-    "prod": "http://maciej.toborek.io"
-  },
   "lang": "en",
   "meta": {
     "title": "Maciej Toborek",

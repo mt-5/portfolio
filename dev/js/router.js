@@ -5,7 +5,8 @@ module.exports = function(){
 
 	//Global variables
 	const ViewController = require('./view');
-	var router = new Navigo();
+
+	var router = new Navigo(location.protocol + '//' + window.location.host);
 	var skrlr = null;
 	
 	if(!isMobile())
