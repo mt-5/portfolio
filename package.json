@@ -5,8 +5,8 @@
   "author": "Maciej Toborek",
   "license": "ISC",
   "scripts": {
-    "dev" : "ws -o --spa index.html -d dev/",
-    "prod" : "grunt build && ws -o --spa index.html -d dist/",
+    "server" : "ws -o --spa index.html -d dev/",
+    "build" : "grunt build",
     "deploy" : "grunt build && grunt deploy"
   },
   "devDependencies": {

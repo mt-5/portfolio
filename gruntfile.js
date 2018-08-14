@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-	build: parseInt(grunt.file.readJSON('data.json').build),
+		build: parseInt(grunt.file.readJSON('data.json').build),
 
 		sass: {
 			options: {
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 		watch: {
 			options: {
 				livereload: {
-					host: '192.168.0.10'
+					host: grunt.file.readJSON('env.json').env.dev.host
 				}
 			},
 			grunt: { files: ['gruntfile.js'] },

@@ -50,6 +50,7 @@
 								<span class="c-experience__pg__title__number">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span> 
 								<span class="c-experience__pg__title__name">{{ paragraph.position | safe }}</span>
 							</h3>
+							<h4>{{ paragraph.period | safe }}</h4>
 							<p>{{ paragraph.heading | safe }}</p>
 							<ul class="c-experience__pg__list">
 								{% for item in paragraph.list %}

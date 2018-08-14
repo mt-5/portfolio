@@ -50,6 +50,7 @@
       "paragraphs": [
         {
           "position": "Freelancer",
+          "period": "01.2015 &ndash; now",
           "heading": "As a <strong>freelancer</strong> I:",
           "list": [
             "coded RWD layouts from PSD",
@@ -62,6 +63,7 @@
         },
         {
           "position": "Web developer",
+          "period": "02.2016 &ndash; 04.2017",
           "heading": "In <strong>niepsuj.it</strong> I:",
           "list": [
             "coded RWD layouts from PSD",
@@ -73,6 +75,7 @@
         },
         {
           "position": "Trainee",
+          "period": "06.2013 &ndash; 08.2013 ",
           "heading": "In <strong>Mobile Technologies GmbH</strong> I:",
           "list": [
             "programmed in C/C++",
@@ -82,6 +85,7 @@
         },
         {
           "position": "Trainee",
+          "period": "05.2013 &ndash; 06.2013",
           "heading": "In <strong>Mojito Agencja Kreatywna sp. z o.o.</strong> I:",
           "list": [
             "configured Wordpress templates",
@@ -194,6 +198,72 @@
         "slug": "stalmach",
         "desc": "Wordpress website",
         "thumb": "img/projects/stalmach/thumb.jpg"
+      },
+      {
+        "name": "Sigmapower",
+        "slug": "stalmach",
+        "desc": "Wordpress website",
+        "thumb": "img/projects/sigmapower/thumb.jpg"
+      },
+      {
+        "name": "Neffos",
+        "slug": "neffos",
+        "desc": "Static website",
+        "thumb": "img/projects/neffos/thumb.jpg"
+      },
+      {
+        "name": "Real friends",
+        "slug": "real-friends",
+        "desc": "Laravel app",
+        "thumb": "img/projects/rf/thumb.jpg"
+      },
+      {
+        "name": "Weather station",
+        "slug": "weather-station",
+        "desc": "PhoneGap application",
+        "thumb": "img/projects/weather/thumb.jpg"
+      },
+      {
+        "name": "Animated showcase",
+        "slug": "glensk",
+        "desc": "Adobe AE short animation",
+        "thumb": "img/projects/glensk/thumb.jpg"
+      },
+      {
+        "name": "MAP Agency",
+        "slug": "map",
+        "desc": "Static website",
+        "thumb": "img/projects/map/thumb.jpg"
+      },
+      {
+        "name": "Skarb kibica",
+        "slug": "skarb-kibica",
+        "desc": "PhoneGap application",
+        "thumb": "img/projects/skarb-kibica/thumb.jpg"
+      },
+      {
+        "name": "Pomorscy",
+        "slug": "skarb-kibica",
+        "desc": "Wordpress website",
+        "thumb": "img/projects/pomorscy/thumb.jpg"
+      },
+      {
+        "name": "Magazyn Praga",
+        "slug": "mp",
+        "desc": "SPA with custom sildeshow",
+        "thumb": "img/projects/mp/thumb.jpg"
+      },
+      {
+        "name": "HK Logistic",
+        "slug": "hk-logistic",
+        "desc": "Wordpress website",
+        "thumb": "img/projects/hkl/thumb.jpg"
+      },
+      {
+        "name": "Syntonic",
+        "slug": "syntonic",
+        "desc": "Static HTML with Blade",
+        "thumb": "img/projects/syntonic/thumb.jpg"
       }
     ]
   },
@@ -281,5 +351,5 @@
       ]
     }
   },
-  "build": "37"
+  "build": "38"
 }
