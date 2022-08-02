@@ -2,14 +2,30 @@
 
 module.exports = function (grunt) {
 
-	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	
+	const sass = require('node-sass');
+  const matchdep = require('matchdep');
+	const env = grunt.file.readJSON('env.json').env;
+
+	matchdep.filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		build: parseInt(grunt.file.readJSON('data.json').build),
 
+		'http-server': {
+			'dev': {
+				root: 'dev/',
+				port: env.dev.port,
+				host: env.dev.host,
+				openBrowser : true,
+				runInBackground: true,
+			}
+		},
+
 		sass: {
 			options: {
+				implementation: sass,
 				includePaths: ['node_modules/bootstrap/scss']
 			},
 			dev: {
@@ -26,7 +42,8 @@ module.exports = function (grunt) {
 		watch: {
 			options: {
 				livereload: {
-					host: grunt.file.readJSON('env.json').env.dev.host
+					host: env.dev.host,
+					port: 8081,
 				}
 			},
 			grunt: { files: ['gruntfile.js'] },
@@ -53,7 +70,6 @@ module.exports = function (grunt) {
 			options: {
 				processors: [
 					require('autoprefixer')({
-						browsers: ['last 10 versions', 'ie 8', 'ie 9'],
 						diff: true 
 					}), // add vendor prefixes
 					require('cssnano')() // minify the result
@@ -161,25 +177,31 @@ module.exports = function (grunt) {
 			},
 			files: ['data.json']
 		},
-		shell: {
-			deploy: {
-				command: [
-					'echo Uploading app to server...',
-					'scp build.zip maciej@toborek.io:build.zip',
-					'echo Deleting files on server...',
-					'ssh maciej@toborek.io "rm -rf www/*"',
-					'echo Unpacking files...',
-					'ssh maciej@toborek.io "unzip -q build.zip -d www/"',
-					'echo Deleting temp files...',
-					'ssh maciej@toborek.io "rm build.zip"',
-					'echo Finish!'
-				].join('&&')
-			}
-		}
 	});
 
-	grunt.registerTask('compile', 	['sass', 'browserify', 'clean:html', 'nunjucks:dev'] );
-	grunt.registerTask('default', 	['compile', 'watch']);
-	grunt.registerTask('build', 	['buildnumber', 'clean:build', 'copy:build', 'sass', 'postcss:build', 'browserify', 'uglify:build', 'nunjucks:build', 'htmlmin', 'chmod:build'] );
-	grunt.registerTask('deploy',	['compress', 'shell:deploy'] );
+	grunt.registerTask('compile', [ 
+		'sass',
+		'browserify',
+		'clean:html',
+		'nunjucks:dev'
+	]);
+
+	grunt.registerTask('default', [
+		'compile',
+		'http-server',
+		'watch'
+	]);
+
+	grunt.registerTask('build', [
+		'buildnumber',
+		'clean:build',
+		'copy:build',
+		'sass',
+		'postcss:build',
+		'browserify',
+		'uglify:build',
+		'nunjucks:build',
+		'htmlmin',
+		'chmod:build'
+	]);
 }

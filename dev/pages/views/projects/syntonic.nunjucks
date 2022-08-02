@@ -1,0 +1,2 @@
+{% set content = projects.syntonic %}
+{% include '../../templates/project.nunjucks' %}

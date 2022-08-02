@@ -39,8 +39,8 @@ View.prototype.load = function(name, afterLoading){
 		
 		var h1 = that._wrapper.getElementsByTagName('h1');
 		
-		if(h1.length && that._baseTitle !== h1[0].innerHTML )
-			document.title = that._baseTitle + that._titleSeparator + h1[0].innerHTML;
+		if(h1.length && that._baseTitle !== h1[0].innerText )
+			document.title = that._baseTitle + that._titleSeparator + h1[0].innerText;
 		else
 			document.title = that._baseTitle;
 

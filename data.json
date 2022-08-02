@@ -16,7 +16,7 @@
       "title": "Maciej Toborek",
       "subtitle": "Junior Full Stack Web Developer",
       "desc": "Hey! I'm 23 years old junior web developer living in London, born in Poland. My main skills are HTML/CSS, jQuery &amp; Wordpress.",
-      "photo_src": "img/profile2_c.jpg"
+      "photo_src": "img/profile3_c.jpg"
     },
     "contact": {
       "list": [
@@ -201,7 +201,7 @@
       },
       {
         "name": "Sigmapower",
-        "slug": "stalmach",
+        "slug": "sigmapower",
         "desc": "Wordpress website",
         "thumb": "img/projects/sigmapower/thumb.jpg"
       },
@@ -275,7 +275,7 @@
     "visit_webstie": "Go to website",
     "stalmach": {
       "name": "Stalmach",
-      "desc": "I coded Wordpress template based on graphic design provided by the client. ",
+      "desc": "I coded Wordpress template based on layout designed by copartner. ",
       "href": "http://www.stalmach.pl",
       "gallery": [
         {
@@ -297,6 +297,222 @@
           "mockup": "m-sg",
           "layout": "img/projects/stalmach/screen4.jpg",
           "thumb": "img/projects/stalmach/screen4-thumb.jpg"
+        }
+      ],
+      "tools": [
+        {
+          "icon": "html5",
+          "name": "HTML 5"
+        },
+        {
+          "icon": "css3",
+          "name": "CSS 3"
+        },
+        {
+          "icon": "js",
+          "name": "Java Script"
+        },
+        {
+          "icon": "wordpress",
+          "name": "Wordpress"
+        },
+        {
+          "icon": "php",
+          "name": "PHP"
+        },
+        {
+          "icon": "jquery",
+          "name": "jQuery"
+        },
+        {
+          "icon": "sass",
+          "name": "Sass"
+        },
+        {
+          "icon": "grunt",
+          "name": "Grunt"
+        },
+        {
+          "icon": "mysql",
+          "name": "MySQL"
+        },
+        {
+          "icon": "git",
+          "name": "GIT"
+        },
+        {
+          "icon": "bootstrap",
+          "name": "Bootstrap"
+        },
+        {
+          "icon": "apache",
+          "name": "Apache server"
+        }
+      ]
+    },
+    "neffos": {
+      "name": "Neffos",
+      "desc": "I coded Wordpress template based on layout designed by copartner.",
+      "href": "http://www.sigmapower.pl",
+      "gallery": [
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/neffos/screen1.jpg",
+          "thumb": "img/projects/neffos/screen1-thumb.jpg"
+        },
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/neffos/screen2.jpg",
+          "thumb": "img/projects/neffos/screen2-thumb.jpg"
+        },
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/neffos/screen3.jpg",
+          "thumb": "img/projects/neffos/screen3-thumb.jpg"
+        }
+      ],
+      "tools": [
+        {
+          "icon": "html5",
+          "name": "HTML 5"
+        },
+        {
+          "icon": "css3",
+          "name": "CSS 3"
+        },
+        {
+          "icon": "js",
+          "name": "Java Script"
+        },
+        {
+          "icon": "wordpress",
+          "name": "Wordpress"
+        },
+        {
+          "icon": "php",
+          "name": "PHP"
+        },
+        {
+          "icon": "jquery",
+          "name": "jQuery"
+        },
+        {
+          "icon": "sass",
+          "name": "Sass"
+        },
+        {
+          "icon": "grunt",
+          "name": "Grunt"
+        },
+        {
+          "icon": "mysql",
+          "name": "MySQL"
+        },
+        {
+          "icon": "git",
+          "name": "GIT"
+        },
+        {
+          "icon": "bootstrap",
+          "name": "Bootstrap"
+        },
+        {
+          "icon": "apache",
+          "name": "Apache server"
+        }
+      ]
+    },
+    "sigmapower": {
+      "name": "Sigma power",
+      "desc": "I coded Wordpress template based on layout designed by copartner.",
+      "href": "http://www.sigmapower.pl",
+      "gallery": [
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/sigmapower/screen1.jpg",
+          "thumb": "img/projects/sigmapower/screen1-thumb.jpg"
+        },
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/sigmapower/screen2.jpg",
+          "thumb": "img/projects/sigmapower/screen2-thumb.jpg"
+        },
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/sigmapower/screen3.jpg",
+          "thumb": "img/projects/sigmapower/screen3-thumb.jpg"
+        }
+      ],
+      "tools": [
+        {
+          "icon": "html5",
+          "name": "HTML 5"
+        },
+        {
+          "icon": "css3",
+          "name": "CSS 3"
+        },
+        {
+          "icon": "js",
+          "name": "Java Script"
+        },
+        {
+          "icon": "wordpress",
+          "name": "Wordpress"
+        },
+        {
+          "icon": "php",
+          "name": "PHP"
+        },
+        {
+          "icon": "jquery",
+          "name": "jQuery"
+        },
+        {
+          "icon": "sass",
+          "name": "Sass"
+        },
+        {
+          "icon": "grunt",
+          "name": "Grunt"
+        },
+        {
+          "icon": "mysql",
+          "name": "MySQL"
+        },
+        {
+          "icon": "git",
+          "name": "GIT"
+        },
+        {
+          "icon": "bootstrap",
+          "name": "Bootstrap"
+        },
+        {
+          "icon": "apache",
+          "name": "Apache server"
+        }
+      ]
+    },
+    "syntonic": {
+      "name": "Syntonic",
+      "desc": "I coded Wordpress template based on layout designed by copartner.",
+      "href": "http://www.syntonic.pl",
+      "gallery": [
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/sigmapower/screen1.jpg",
+          "thumb": "img/projects/sigmapower/screen1-thumb.jpg"
+        },
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/sigmapower/screen2.jpg",
+          "thumb": "img/projects/sigmapower/screen2-thumb.jpg"
+        },
+        {
+          "mockup": "m-ss",
+          "layout": "img/projects/sigmapower/screen3.jpg",
+          "thumb": "img/projects/sigmapower/screen3-thumb.jpg"
         }
       ],
       "tools": [
