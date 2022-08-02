@@ -3,8 +3,9 @@
 #### How to build dev version:
 
 1. Go to project directory
-2. Run "npm install"
-3. Run "grunt"
+2. Copy ".env.example.json", rename to ".env" and update
+3. Run "npm install"
+4. Run "npm run dev"
 
 Main file location: "dev/index.html"
 
