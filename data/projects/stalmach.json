@@ -1,0 +1,80 @@
+{
+  "name": "Stalmach",
+  "subtitle": "Wordpress website",
+  "thumb": "img/projects/stalmach/thumb.jpg",
+  "desc": "I coded Wordpress template based on layout designed by copartner. ",
+  "href": "http://www.stalmach.pl",
+  "slug": "stalmach",
+  "gallery": [
+    {
+      "mockup": "m-ss",
+      "layout": "img/projects/stalmach/screen1.jpg",
+      "thumb": "img/projects/stalmach/screen1-thumb.jpg"
+    },
+    {
+      "mockup": "m-ss",
+      "layout": "img/projects/stalmach/screen2.jpg",
+      "thumb": "img/projects/stalmach/screen2-thumb.jpg"
+    },
+    {
+      "mockup": "m-ss",
+      "layout": "img/projects/stalmach/screen3.jpg",
+      "thumb": "img/projects/stalmach/screen3-thumb.jpg"
+    },
+    {
+      "mockup": "m-sg",
+      "layout": "img/projects/stalmach/screen4.jpg",
+      "thumb": "img/projects/stalmach/screen4-thumb.jpg"
+    }
+  ],
+  "tools": [
+    {
+      "icon": "html5",
+      "name": "HTML 5"
+    },
+    {
+      "icon": "css3",
+      "name": "CSS 3"
+    },
+    {
+      "icon": "js",
+      "name": "Java Script"
+    },
+    {
+      "icon": "wordpress",
+      "name": "Wordpress"
+    },
+    {
+      "icon": "php",
+      "name": "PHP"
+    },
+    {
+      "icon": "jquery",
+      "name": "jQuery"
+    },
+    {
+      "icon": "sass",
+      "name": "Sass"
+    },
+    {
+      "icon": "grunt",
+      "name": "Grunt"
+    },
+    {
+      "icon": "mysql",
+      "name": "MySQL"
+    },
+    {
+      "icon": "git",
+      "name": "GIT"
+    },
+    {
+      "icon": "bootstrap",
+      "name": "Bootstrap"
+    },
+    {
+      "icon": "apache",
+      "name": "Apache server"
+    }
+  ]
+}

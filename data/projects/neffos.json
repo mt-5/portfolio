@@ -1,0 +1,75 @@
+{
+  "name": "Neffos",
+  "subtitle": "Static website",
+  "slug": "neffos",
+  "thumb": "img/projects/neffos/thumb.jpg",
+  "desc": "I coded Wordpress template based on layout designed by copartner.",
+  "href": "http://www.sigmapower.pl",
+  "gallery": [
+    {
+      "mockup": "m-ss",
+      "layout": "img/projects/neffos/screen1.jpg",
+      "thumb": "img/projects/neffos/screen1-thumb.jpg"
+    },
+    {
+      "mockup": "m-ss",
+      "layout": "img/projects/neffos/screen2.jpg",
+      "thumb": "img/projects/neffos/screen2-thumb.jpg"
+    },
+    {
+      "mockup": "m-ss",
+      "layout": "img/projects/neffos/screen3.jpg",
+      "thumb": "img/projects/neffos/screen3-thumb.jpg"
+    }
+  ],
+  "tools": [
+    {
+      "icon": "html5",
+      "name": "HTML 5"
+    },
+    {
+      "icon": "css3",
+      "name": "CSS 3"
+    },
+    {
+      "icon": "js",
+      "name": "Java Script"
+    },
+    {
+      "icon": "wordpress",
+      "name": "Wordpress"
+    },
+    {
+      "icon": "php",
+      "name": "PHP"
+    },
+    {
+      "icon": "jquery",
+      "name": "jQuery"
+    },
+    {
+      "icon": "sass",
+      "name": "Sass"
+    },
+    {
+      "icon": "grunt",
+      "name": "Grunt"
+    },
+    {
+      "icon": "mysql",
+      "name": "MySQL"
+    },
+    {
+      "icon": "git",
+      "name": "GIT"
+    },
+    {
+      "icon": "bootstrap",
+      "name": "Bootstrap"
+    },
+    {
+      "icon": "apache",
+      "name": "Apache server"
+    }
+  ]
+}

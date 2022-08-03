@@ -11,15 +11,12 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		build: parseInt(grunt.file.readJSON('data.json').build),
+		build: parseInt(grunt.file.readJSON('data/data.json').build),
 
-		'http-server': {
-			'dev': {
-				root: 'dev/',
-				port: env.dev.port,
-				host: env.dev.host,
-				openBrowser : true,
-				runInBackground: true,
+		shell: {
+			server: {
+				command: 'ws -o --spa index.html -d dev/',
+				options: { async: true }
 			}
 		},
 
@@ -56,7 +53,7 @@ module.exports = function (grunt) {
 				tasks: [ 'browserify:script' ]
 			},
 			html: {
-				files: [ 'dev/**/*.nunjucks', 'data*.json' ],
+				files: [ 'dev/**/*.nunjucks', 'data/**/*.json' ],
 				tasks: [ 'clean:html', 'nunjucks:dev' ]
 			}
 		},
@@ -87,7 +84,26 @@ module.exports = function (grunt) {
 		},
 		nunjucks: {
 			options: {
-				data:  Object.assign(grunt.file.readJSON('data.json'), grunt.file.readJSON('env.json'))
+				data: {
+					...grunt.file.readJSON('env.json'),
+					...grunt.file.readJSON('data/data.json'),
+
+					//Projects
+					projects: {
+						glensk: grunt.file.readJSON('data/projects/glensk.json'),
+						hklogistic: grunt.file.readJSON('data/projects/hk-logistic.json'),
+						magazynpraga: grunt.file.readJSON('data/projects/magazyn-praga.json'),
+						map: grunt.file.readJSON('data/projects/map.json'),
+						neffos: grunt.file.readJSON('data/projects/neffos.json'),
+						pomorscy: grunt.file.readJSON('data/projects/pomorscy.json'),
+						realfriends: grunt.file.readJSON('data/projects/real-friends.json'),
+						sigmapower: grunt.file.readJSON('data/projects/sigmapower.json'),
+						skarbkibica: grunt.file.readJSON('data/projects/skarb-kibica.json'),
+						stalmach: grunt.file.readJSON('data/projects/stalmach.json'),
+						syntonic: grunt.file.readJSON('data/projects/syntonic.json'),
+						weatherstation: grunt.file.readJSON('data/projects/weather-station.json')
+					}
+				}
 			},
 			dev: {
 				options: {
@@ -105,7 +121,7 @@ module.exports = function (grunt) {
 			},
 			build: {
 				options: {
-					data: grunt.file.readJSON('data.json'),
+					data: grunt.file.readJSON('data/data.json'),
 					configureEnvironment: function(env, nunjucks) { env.addGlobal('target', 'build'); },
 				},
 				files: [
@@ -175,7 +191,7 @@ module.exports = function (grunt) {
 			options: {
 			  field: 'build',
 			},
-			files: ['data.json']
+			files: ['data/data.json']
 		},
 	});
 
@@ -188,7 +204,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('default', [
 		'compile',
-		'http-server',
+		'shell:server',
 		'watch'
 	]);
 

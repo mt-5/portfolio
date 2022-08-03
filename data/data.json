@@ -1,0 +1,207 @@
+{
+  "lang": "en",
+  "meta": {
+    "title": "Maciej Toborek",
+    "keywords": "web developer, full stack develper, front end developer, back end developer, portfolio",
+    "description": "Hello! It's Maciej. I'm full stack of creativity web developer. If you're willing to hire me, write boldly 🖐"
+  },
+  "og": {
+    "title": "",
+    "url": "",
+    "image": "",
+    "site_name": ""
+  },
+  "home": {
+    "heading": {
+      "title": "Maciej Toborek",
+      "subtitle": "Full Stack Web Developer",
+      "desc": "Hey! I'm 28 years old web developer based in London, born in Poland. I love creating apps using VueJs and Laravel. I have also good experience with Wordpress.",
+      "photo_src": "img/profile.jpeg"
+    },
+    "contact": {
+      "list": [
+        {
+          "icon_slug": "mail",
+          "name": "maciej@toborek.com",
+          "href": "mailto:maciej@toborek.com",
+          "target": ""
+        },
+        {
+          "icon_slug": "linkedin",
+          "name": "linkedin.com/in/mac-tob",
+          "href": "https://www.linkedin.com/in/mac-tob",
+          "target": "_blank"
+        },
+        {
+          "icon_slug": "github",
+          "name": "github.com/toboriusz",
+          "href": "https://github.com/toboriusz",
+          "target": "_blank"
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "Projects",
+      "desc": "Check out my cool projects:",
+      "link": "Explore"
+    },
+    "experience": {
+      "title": "Experience",
+      "paragraphs": [
+        {
+          "position": "Freelancer",
+          "period": "01.2015 &ndash; now",
+          "heading": "As a <strong>freelancer</strong> I:",
+          "list": [
+            "coded RWD layouts from PSD",
+            "coded scripts in JS",
+            "built apps in Laravel",
+            "built websites based on Wordpress",
+            "created animations in CSS, jQuery",
+            "used GIT version control system"
+          ]
+        },
+        {
+          "position": "Web developer",
+          "period": "02.2016 &ndash; 04.2017",
+          "heading": "In <strong>niepsuj.it</strong> I:",
+          "list": [
+            "coded RWD layouts from PSD",
+            "worked with team remotely",
+            "built websites based on the Silex PHP framework",
+            "built Wordpress templates",
+            "coded animations with CSS3 &amp; jQuery"
+          ]
+        },
+        {
+          "position": "Trainee",
+          "period": "06.2013 &ndash; 08.2013 ",
+          "heading": "In <strong>Mobile Technologies GmbH</strong> I:",
+          "list": [
+            "programmed in C/C++",
+            "worked with team on the speech2speech translator",
+            "tagged voice samples audio"
+          ]
+        },
+        {
+          "position": "Trainee",
+          "period": "05.2013 &ndash; 06.2013",
+          "heading": "In <strong>Mojito Agencja Kreatywna sp. z o.o.</strong> I:",
+          "list": [
+            "configured Wordpress templates",
+            "coded RWD webistes (Sass, Bootstrap, Foundation)",
+            "coded auctions and emails templates"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "list": [
+        {
+          "name": "HTML",
+          "value": 90
+        },
+        {
+          "name": "CSS",
+          "value": 85
+        },
+        {
+          "name": "JS",
+          "value": 66
+        },
+        {
+          "name": "jQuery",
+          "value": 85
+        },
+        {
+          "name": "Wordpress",
+          "value": 80
+        },
+        {
+          "name": "PHP",
+          "value": 65
+        },
+        {
+          "name": "MySQL",
+          "value": 45
+        },
+        {
+          "name": "Laravel",
+          "value": 55
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "list": [
+        {
+          "title": "BSc. of Computer Science",
+          "years": "2014-2018",
+          "desc": "At University of Silesia in Katowice, Poland. <br> One outstanding exam to pass"
+        },
+        {
+          "title": "IT technician",
+          "years": "2009-2014",
+          "desc": "At ZSTiL in Czechowice-Dziedzice, Poland."
+        }
+      ]
+    },
+    "references": {
+      "title": "References",
+      "list": [
+        {
+          "client": "Samsung",
+          "body": "The UX designers were very impressed at how far you have come with the page, how good it looks and how well things are functioning. Your developers have done a fantastic job!"
+        },
+        {
+          "client": "Mobile Technologies",
+          "body": "Mr. Toborek completed assigned to him work to our full satisfaction. He was always friendly and helpful to his superiors and colleagues."
+        },
+        {
+          "client": "Stalmach",
+          "body": "My admiration to the site has no limits!! The site is great. Really, really good job. We are delighted. I knew from the beginning that cooperation with you would be great, but the results positively surpassed me. Congratulations once again. I will be recommending you with confidence. Thanks again."
+        }
+      ]
+    },
+    "hobby": {
+      "title": "Hobby",
+      "list": [
+        {
+          "name": "Digital &amp; analog electronic",
+          "anim_slug": "electronic"
+        },
+        {
+          "name": "Skiing",
+          "anim_slug": "skiing"
+        },
+        {
+          "name": "Music",
+          "anim_slug": "music"
+        },
+        {
+          "name": "DIY",
+          "anim_slug": "diy"
+        }
+      ]
+    }
+  },
+  
+  "footer": {
+    "body": "&copy; Maciej Toborek 2022"
+  },
+  
+  "portfolio": {
+    "title": "Projects",
+    "pre_title": "Projects / ",
+    "slug": "portfolio"
+  },
+
+  "project" : {
+    "desc": "Description",
+    "tools": "Tools",
+    "visit_webstie": "Go to website"
+  },
+
+  "build": "38"
+}
