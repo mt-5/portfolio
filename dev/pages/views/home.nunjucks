@@ -39,6 +39,22 @@
 							<a href="{{ portfolio.slug }}" data-navigo class="c-button p-home__link">{{ home.portfolio.link }}</a>
 						</div>
 					</div>
+					<div class="section">
+						<h2>{{ home.skills.title }}</h2>
+						<hr>
+						<ul class="c-skills">
+							{% for item in home.skills.list %}
+							<li class="c-skills__item">
+								<span class="c-skills__item__name">{{ item.name }}</span>
+								<div class="c-skills__item__progressbar">
+									<div class="c-skills__item__progressbar__bar" data-bottom-top="transform: translate3d(-100%, 0, 0)" data-bottom="transform: translate3d(0%, 0, 0)" style="width: {{ item.value }}%"></div>
+								</div>
+							</li>    
+							{% endfor %}
+
+						</ul>
+
+					</div>
 				</div>
 				<div class="col-lg-7 main-col-right section">
 					<h2>{{ home.experience.title }}</h2>
@@ -64,44 +80,13 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-5 main-col-left section">
-					<h2>{{ home.skills.title }}</h2>
-					<hr>
-					<ul class="c-skills">
-						{% for item in home.skills.list %}
-						<li class="c-skills__item">
-							<span class="c-skills__item__name">{{ item.name }}</span>
-							<div class="c-skills__item__progressbar">
-								<div class="c-skills__item__progressbar__bar" data-bottom-top="transform: translate3d(-100%, 0, 0)" data-bottom="transform: translate3d(0%, 0, 0)" style="width: {{ item.value }}%"></div>
-							</div>
-						</li>    
-						{% endfor %}
-
-					</ul>
-
-				</div>
-				<div class="col-lg-7 main-col-right section">
-					<h2>{{ home.education.title }}</h2>
-					<hr>
-					<ul class="c-education">
-						{% for item in home.education.list %}
-						<li class="c-education__item" data-bottom-top="transform: translate3d(0,100px,0);" data--100-bottom="transform: translate3d(0,0px,0);">
-							<h3 class="c-education__item__title">{{ item.title | safe }}</h3>
-							<h4 class="c-education__item__years">{{ item.years | safe }}</h4>
-							<p class="c-education__item__desc">{{ item.desc | safe}}</p>
-						</li>    
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-5 main-col-left section">
 					<h2>{{ home.references.title }}</h2>
 					<hr>
 					<ul class="c-references">
 						{% for item in home.references.list %}
 						<li class="c-references__item" data-bottom-top="transform: translate3d(0,100px,0); opacity: 0;" data--30-bottom="transform: translate3d(0,0px,0); opacity: 1;">
-							<h3>{{ item.client }}</h3>
-							<p>{{ item.body | safe }}</p>
+							<h3>{{ item.customer }}</h3>
+							<p>{{ item.text | safe }}</p>
 						</li>    
 						{% endfor %}
 					</ul>

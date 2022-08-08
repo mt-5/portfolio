@@ -41,7 +41,7 @@
       ]
     },
     "portfolio": {
-      "title": "Projects",
+      "title": "Portfolio",
       "desc": "Check out my cool projects:",
       "link": "Explore"
     },
@@ -49,16 +49,34 @@
       "title": "Experience",
       "paragraphs": [
         {
+          "position": "Software developer",
+          "period": "09.2018 &ndash; now",
+          "heading": "In <strong>Social Interest Group</strong> I:",
+          "list": [
+            "created scritpts to automate internal processes in organistaion",
+            "designed and developed rota management system that runs in 40 services",
+            "designed and coded custom Wordpress templates for orgainstation needs",
+            "developed recruitment online application",
+            "provided IT support for 400 employees",
+            "developed IT asset management system for our needs",
+            "maintained 800 work devices",
+            "managed Active Directory, Azure and Intune",
+            "configured VPS'es for web apps"
+          ]
+        },
+        {
           "position": "Freelancer",
           "period": "01.2015 &ndash; now",
-          "heading": "As a <strong>freelancer</strong> I:",
+          "heading": "As a <strong>freelancer</strong> after 9-5 job I:",
           "list": [
-            "coded RWD layouts from PSD",
-            "coded scripts in JS",
-            "built apps in Laravel",
-            "built websites based on Wordpress",
-            "created animations in CSS, jQuery",
-            "used GIT version control system"
+            "designed and coded websites based on Wordpress",
+            "maintainned Wordpress websites",
+            "built applications in Laravel",
+            "coded custom animations in CSS, SVG and Javascript",
+            "designed advertiesment banners and short videos",
+            "edited images in Affinity Designer and Gimp and Photoshop",
+            "created vector grahics",
+            "configured evironments for web applications in Linux environment"
           ]
         },
         {
@@ -67,26 +85,16 @@
           "heading": "In <strong>niepsuj.it</strong> I:",
           "list": [
             "coded RWD layouts from PSD",
-            "worked with team remotely",
             "built websites based on the Silex PHP framework",
-            "built Wordpress templates",
-            "coded animations with CSS3 &amp; jQuery"
+            "built custom Wordpress templates",
+            "coded fancy animations in CSS3 and jQuery",
+            "worked with team remotely"
           ]
         },
         {
           "position": "Trainee",
           "period": "06.2013 &ndash; 08.2013 ",
-          "heading": "In <strong>Mobile Technologies GmbH</strong> I:",
-          "list": [
-            "programmed in C/C++",
-            "worked with team on the speech2speech translator",
-            "tagged voice samples audio"
-          ]
-        },
-        {
-          "position": "Trainee",
-          "period": "05.2013 &ndash; 06.2013",
-          "heading": "In <strong>Mojito Agencja Kreatywna sp. z o.o.</strong> I:",
+          "heading": "In <strong>Mojito Agencja Kreatywna</strong> I:",
           "list": [
             "configured Wordpress templates",
             "coded RWD webistes (Sass, Bootstrap, Foundation)",
@@ -99,51 +107,32 @@
       "title": "Skills",
       "list": [
         {
-          "name": "HTML",
+          "name": "VueJs",
           "value": 90
         },
         {
-          "name": "CSS",
-          "value": 85
+          "name": "NuxtJs",
+          "value": 95
         },
         {
-          "name": "JS",
-          "value": 66
-        },
-        {
-          "name": "jQuery",
-          "value": 85
+          "name": "Laravel",
+          "value": 78
         },
         {
           "name": "Wordpress",
           "value": 80
         },
         {
-          "name": "PHP",
+          "name": "MySQL",
+          "value": 75
+        },
+        {
+          "name": "Figma",
           "value": 65
         },
         {
-          "name": "MySQL",
-          "value": 45
-        },
-        {
-          "name": "Laravel",
-          "value": 55
-        }
-      ]
-    },
-    "education": {
-      "title": "Education",
-      "list": [
-        {
-          "title": "BSc. of Computer Science",
-          "years": "2014-2018",
-          "desc": "At University of Silesia in Katowice, Poland. <br> One outstanding exam to pass"
-        },
-        {
-          "title": "IT technician",
-          "years": "2009-2014",
-          "desc": "At ZSTiL in Czechowice-Dziedzice, Poland."
+          "name": "CSS3",
+          "value": 98
         }
       ]
     },
@@ -151,16 +140,16 @@
       "title": "References",
       "list": [
         {
-          "client": "Samsung",
-          "body": "The UX designers were very impressed at how far you have come with the page, how good it looks and how well things are functioning. Your developers have done a fantastic job!"
+          "customer": "Social Interest Group",
+          "text": "During my employement I was awarded 'For Significant Creativity in the Business', 'For Going the Extra Mile' and 'For Initiative'"
         },
         {
-          "client": "Mobile Technologies",
-          "body": "Mr. Toborek completed assigned to him work to our full satisfaction. He was always friendly and helpful to his superiors and colleagues."
+          "customer": "Samsung",
+          "text": "The UX designers were very impressed at how far you have come with the page, how good it looks and how well things are functioning. Your developers have done a fantastic job!"
         },
         {
-          "client": "Stalmach",
-          "body": "My admiration to the site has no limits!! The site is great. Really, really good job. We are delighted. I knew from the beginning that cooperation with you would be great, but the results positively surpassed me. Congratulations once again. I will be recommending you with confidence. Thanks again."
+          "customer": "Stalmach",
+          "text": "My admiration to the site has no limits!! The site is great. Really, really good job. We are delighted. I knew from the beginning that cooperation with you would be great, but the results positively surpassed me. Congratulations once again. I will be recommending you with confidence."
         }
       ]
     },
@@ -186,22 +175,18 @@
       ]
     }
   },
-  
   "footer": {
     "body": "&copy; Maciej Toborek 2022"
   },
-  
   "portfolio": {
-    "title": "Projects",
-    "pre_title": "Projects / ",
+    "title": "Portfolio",
+    "pre_title": "Portfolio / ",
     "slug": "portfolio"
   },
-
-  "project" : {
+  "project": {
     "desc": "Description",
     "tools": "Tools",
     "visit_webstie": "Go to website"
   },
-
-  "build": "38"
+  "build": "52"
 }

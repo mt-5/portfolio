@@ -2,10 +2,31 @@
 
 module.exports = function (grunt) {
 
-	
 	const sass = require('node-sass');
   const matchdep = require('matchdep');
 	const env = grunt.file.readJSON('env.json').env;
+
+	const websiteContent = {
+
+		env,
+		...grunt.file.readJSON('data/data.json'),
+
+		//Projects
+		projects: {
+			glensk: grunt.file.readJSON('data/projects/glensk.json'),
+			hklogistic: grunt.file.readJSON('data/projects/hk-logistic.json'),
+			magazynpraga: grunt.file.readJSON('data/projects/magazyn-praga.json'),
+			map: grunt.file.readJSON('data/projects/map.json'),
+			neffos: grunt.file.readJSON('data/projects/neffos.json'),
+			pomorscy: grunt.file.readJSON('data/projects/pomorscy.json'),
+			realfriends: grunt.file.readJSON('data/projects/real-friends.json'),
+			sigmapower: grunt.file.readJSON('data/projects/sigmapower.json'),
+			skarbkibica: grunt.file.readJSON('data/projects/skarb-kibica.json'),
+			stalmach: grunt.file.readJSON('data/projects/stalmach.json'),
+			syntonic: grunt.file.readJSON('data/projects/syntonic.json'),
+			weatherstation: grunt.file.readJSON('data/projects/weather-station.json')
+		}
+	};
 
 	matchdep.filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
@@ -66,10 +87,10 @@ module.exports = function (grunt) {
 		postcss: {
 			options: {
 				processors: [
-					require('autoprefixer')({
-						diff: true 
-					}), // add vendor prefixes
-					require('cssnano')() // minify the result
+					// require('autoprefixer')({
+					// 	diff: true 
+					// }), // add vendor prefixes
+					//require('cssnano')() // minify the result
 				]
 			},
 			build: { flatten: true, src: 'dev/css/style.css', dest: 'build/css/style.<%= build %>.css' },
@@ -84,26 +105,7 @@ module.exports = function (grunt) {
 		},
 		nunjucks: {
 			options: {
-				data: {
-					...grunt.file.readJSON('env.json'),
-					...grunt.file.readJSON('data/data.json'),
-
-					//Projects
-					projects: {
-						glensk: grunt.file.readJSON('data/projects/glensk.json'),
-						hklogistic: grunt.file.readJSON('data/projects/hk-logistic.json'),
-						magazynpraga: grunt.file.readJSON('data/projects/magazyn-praga.json'),
-						map: grunt.file.readJSON('data/projects/map.json'),
-						neffos: grunt.file.readJSON('data/projects/neffos.json'),
-						pomorscy: grunt.file.readJSON('data/projects/pomorscy.json'),
-						realfriends: grunt.file.readJSON('data/projects/real-friends.json'),
-						sigmapower: grunt.file.readJSON('data/projects/sigmapower.json'),
-						skarbkibica: grunt.file.readJSON('data/projects/skarb-kibica.json'),
-						stalmach: grunt.file.readJSON('data/projects/stalmach.json'),
-						syntonic: grunt.file.readJSON('data/projects/syntonic.json'),
-						weatherstation: grunt.file.readJSON('data/projects/weather-station.json')
-					}
-				}
+				data: websiteContent
 			},
 			dev: {
 				options: {
@@ -121,7 +123,7 @@ module.exports = function (grunt) {
 			},
 			build: {
 				options: {
-					data: grunt.file.readJSON('data/data.json'),
+					data: websiteContent,
 					configureEnvironment: function(env, nunjucks) { env.addGlobal('target', 'build'); },
 				},
 				files: [
@@ -154,7 +156,8 @@ module.exports = function (grunt) {
 		copy: {
 			build: {
 				files: [
-					{ expand: true, cwd: 'dev/', src:'{fonts,docs,img}/**/*', dest:'build/' }
+					{ expand: true, cwd: 'dev/', src:'{fonts,docs,img}/**/*', dest:'build/' },
+					{ expand: true, cwd: 'dev/', src:'.htaccess', dest:'build/' }
 				]
 			},
 			packages: {
